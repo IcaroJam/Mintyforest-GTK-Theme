@@ -52,8 +52,6 @@ $wm_bg_unfocused: opacify($header_bg_backdrop, 1);
 @define-color wm_button_close_hover_bg #{"" + $wm_button_close_hover_bg};
 @define-color wm_button_close_active_bg #{"" + $wm_button_close_active_bg};
 
-@define-color wm_icon_close_bg #{"" + $wm_icon_close_bg};
-
 // Minimize, Maximize
 @define-color wm_button_hover_bg #{"" + $wm_button_hover_bg};
 @define-color wm_button_active_bg #{"" + $wm_button_active_bg};

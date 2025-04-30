@@ -1583,7 +1583,7 @@ menubar,
 
     &:hover { //Seems like it :hover even with keyboard focus
       background-color: $menu_selected_bg_color;
-      color: $fg_color;
+      color: $accent_color;
     }
     &:disabled {
       color: transparentize($header_fg, 0.6);
@@ -1626,7 +1626,7 @@ menu,
     padding: 5px;
 
     &:hover {
-      color: $fg_color;
+      color: $accent_color;
       background-color: $menu_selected_bg_color;
     }
     &:disabled {
@@ -3177,8 +3177,6 @@ headerbar,
   }
 
   button.titlebutton {
-    $_wm_backdrop_icon_color: if($variant == 'light', darken($wm_icon_unfocused_bg, 5%), lighten($wm_icon_unfocused_bg, 5%));
-
     min-width: 20px;
     min-height: 20px;
     @extend .image-button;
@@ -3211,15 +3209,15 @@ headerbar,
       color: $selected_fg_color;
       @include draw_circle($selected_bg_color);
 
-      &:backdrop { @include draw-circle($_wm_backdrop_icon_color); }
-      &:hover { @include draw-circle(lighten($selected_bg_color, 5%)); }
-      &:active { @include draw-circle(darken($selected_bg_color, 5%)); }
+      &:backdrop { @include draw-circle($wm_button_close_bg); }
+      &:hover { @include draw-circle($wm_button_close_hover_bg); }
+      &:active { @include draw-circle($wm_button_close_active_bg); }
     }
 
     &.maximize,
     &.minimize {
       &:backdrop {
-        color: $_wm_backdrop_icon_color;
+        color: $wm_icon_unfocused_bg;
       }
       &:hover,
       &:hover:backdrop {
