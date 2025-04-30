@@ -1,34 +1,55 @@
-$base_color: #272e33;
-$text_color: #d3c6aa;
-$bg_color: #1e2326;
-$fg_color: #d3c6aa;
+// Values of the colour palette
+$def_bg_dim: #1e2326;
+$def_bg_0: #272e33;
+$def_bg_1: #2e383c;
+$def_bg_2: #374145;
+$def_bg_3: #414b50;
+$def_bg_4: #495156;
+$def_bg_5: #4f5b58;
+$def_bg_red: #4c3743;
+$def_bg_yellow: #45443c;
+$def_bg_green: #3c4841;
+$def_bg_blue: #384b55;
+$def_red: #e67e80;
+$def_orange: #e69875;
+$def_yellow: #dbbc7f;
+$def_green: #a7c080;
+$def_aqua: #83c092;
+$def_blue: #7fbbb3;
+$def_purple: #d699b6;
+$def_fg: #d3c6aa;
 
-$selected_bg_color: #83c092;
-$selected_fg_color: #272e33;
-$selected_borders_color: #83c092;
-$borders_color: #374145;
-$separator_color: #495156;
+$base_color: $def_bg_0;
+$text_color: $def_fg;
+$bg_color: $def_bg_dim;
+$fg_color: $def_fg;
 
-$link_color: #7fbbb3;
-$link_visited_color: #d699b6;
+$selected_bg_color: $def_aqua;
+$selected_fg_color: $def_bg_0;
+$selected_borders_color: $def_aqua;
+$borders_color: $def_bg_2;
+$separator_color: $def_bg_4;
+
+$link_color: $def_blue;
+$link_visited_color: $def_purple;
 
 $selection_mode_bg: $selected_bg_color;
 $selection_mode_fg: $selected_fg_color;
-$warning_color: #e69875;
-$warning_fg_color: white;
-$error_color: #e67e80;
-$error_fg_color: white;
-$success_color: #a7c080;
-$destructive_color: #e67e80;
-$suggested_color: #83c092;
-$question_color: #7fbbb3;
+$warning_color: $def_orange;
+$warning_fg_color: $def_bg_0;
+$error_color: $def_red;
+$error_fg_color: $def_bg_0;
+$success_color: $def_green;
+$destructive_color: $def_red;
+$suggested_color: $def_aqua;
+$question_color: $def_blue;
 
 $drop_target_color: $selected_bg_color;
 
 //insensitive state derived colors
-$insensitive_fg_color: #374145;
-$insensitive_bg_color: #1e2326;
-$insensitive_border_color: #2e383c;
+$insensitive_fg_color: $def_bg_2;
+$insensitive_bg_color: $def_bg_dim;
+$insensitive_border_color: $def_bg_1;
 
 $dim_label_fg_color: red;
 
@@ -42,7 +63,7 @@ $header_fg: $fg_color;
 
 $menu_selected_bg_color: transparentize(white, 0.9);
 
-$dark_sidebar_bg: #1e2326;
+$dark_sidebar_bg: $def_bg_dim;
 $dark_sidebar_fg: $fg_color;
 $dark_sidebar_border: $borders_color;
 
@@ -113,4 +134,4 @@ $wm_icon_hover_bg: #C4C7CC;
 $wm_icon_active_bg: #ffffff;
 
 // Terminal color
-$terminal_bg: #272e33;
+$terminal_bg: $def_bg_0;
