@@ -24,12 +24,15 @@ $base_color: $def_bg_0;
 $text_color: $def_fg;
 $accent_color: $def_aqua;
 $negative_color: $def_purple; // A color oposed to the accent one for contrast purposes (visited links and such)
-$bg_color: $def_bg_dim;
+$bg_color: $def_bg_0;
+$bg_hover_color: $def_bg_2;
+$bg_active_color: $def_bg_3;
 $fg_color: $def_fg;
 
 $selected_bg_color: $accent_color;
 $selected_fg_color: $def_bg_0;
 $selected_borders_color: $accent_color;
+
 $borders_color: $def_bg_2;
 $separator_color: $def_bg_4;
 
@@ -38,10 +41,10 @@ $link_visited_color: $negative_color;
 
 $selection_mode_bg: $selected_bg_color;
 $selection_mode_fg: $selected_fg_color;
-$warning_color: $def_orange;
-$warning_fg_color: $def_bg_0;
-$error_color: $def_red;
-$error_fg_color: $def_bg_0;
+$warning_color: $def_bg_0;
+$warning_fg_color: $def_orange;
+$error_color: $def_bg_0;
+$error_fg_color: $def_red;
 $success_color: $def_green;
 $destructive_color: $def_red;
 $suggested_color: $accent_color;
@@ -50,14 +53,14 @@ $question_color: $def_blue;
 $drop_target_color: $selected_bg_color;
 
 //insensitive state derived colors
-$insensitive_fg_color: $def_bg_2;
+$insensitive_fg_color: $def_bg_4;
 $insensitive_bg_color: $def_bg_dim;
 $insensitive_border_color: $def_bg_1;
 
 $dim_label_fg_color: $insensitive_fg_color;
 
-$header_bg: $bg_color;
-$header_bg_backdrop: $bg_color;
+$header_bg: $def_bg_dim;
+$header_bg_backdrop: $def_bg_dim;
 
 $header_border: $borders_color;
 $header_highlight: $borders_color; // The little shine line on top of windows
@@ -70,13 +73,14 @@ $dark_sidebar_bg: $def_bg_dim;
 $dark_sidebar_fg: $fg_color;
 $dark_sidebar_border: $borders_color;
 
-$filechooser_bg: $header_bg;
+$filechooser_bg: $base_color;
 
-$tooltip_bg_color: $bg_color;
+$tooltip_bg_color: $def_bg_dim;
 $tooltip_fg_color: $fg_color;
 
 $osd_fg_color: $fg_color;
 $osd_bg_color: $base_color;
+$osd_borders_color: transparentize(black, 0.3);
 
 $osd_button_bg: transparentize(lighten($osd_bg_color, 22%), 0.6);
 $osd_button_border: transparentize(darken($osd_bg_color, 12%), 0.6);
@@ -86,31 +90,39 @@ $osd_entry_border: transparentize(darken($osd_bg_color, 12%), 0.6);
 
 $osd_insensitive_bg_color: darken($osd_bg_color, 3%);
 $osd_insensitive_fg_color: mix($osd_fg_color, opacify($osd_bg_color, 1), 30%);
-$osd_borders_color: transparentize(black, 0.3);
 
-$panel_bg: #2f2f2f;
-$panel_fg: #DADADA;
+// Lightdm/budgie panel (maybe xfce too?)
+$panel_bg: $base_color;
+$panel_fg: $fg_color;
 
 // These two appear to be for stuff like text inputs with -+ buttons(?. For example the text scaling factor in font config
-$entry_bg: $base_color;
+$entry_bg: $def_bg_1;
 $entry_border: $borders_color;
 
 $header_entry_bg: $base_color;
 $header_entry_border: $borders_color;
 
+// Normal buttons
+$button_fg: $fg_color;
 $button_bg: $def_bg_1;
 $button_border: $borders_color;
+// Hovered buttons
+$button_hover_fg: $accent_color;
+$button_hover_bg: $def_bg_2;
+$button_hover_border: $button_border;
+// Pushed buttons
+$button_active_fg: $base_color;
 $button_active_bg: $accent_color;
-$button_active_border: $borders_color;
+$button_active_border: $button_border;
 
 $header_button_bg: $base_color;
-$header_button_border: $borders_color;
+$header_button_border: $button_border;
+$header_button_hover_bg: $def_bg_1;
 
 $trough_color_treeview: $def_bg_1;
 $trough_color: $def_bg_1;
 
 // WM Colors
-
 $wm_title: $fg_color;
 $wm_title_unfocused: $fg_color;
 $wm_bg: $header_bg;
@@ -120,20 +132,15 @@ $wm_border: $header_border;
 $wm_border_unfocused: $header_border;
 
 //WM Buttons
+$wm_button_bg: $def_bg_1;
 
 // Close
-$wm_button_close_bg: $accent_color;
-$wm_button_close_hover_bg: $negative_color;
-$wm_button_close_active_bg: $bg_color;
+$wm_button_close_hover_bg: $def_red;
+$wm_button_close_active_bg: $def_bg_red;
 
 // Minimize, Maximize
-$wm_button_hover_bg: $def_bg_1;
-$wm_button_active_bg: $def_bg_2;
-
-$wm_icon_bg: red;
-$wm_icon_unfocused_bg: pink;
-$wm_icon_hover_bg: blue;
-$wm_icon_active_bg: green;
+$wm_button_hover_bg: $bg_hover_color;
+$wm_button_active_bg: $bg_active_color;
 
 // Terminal color
 $terminal_bg: $def_bg_0;

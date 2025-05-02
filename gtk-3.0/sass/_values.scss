@@ -1,0 +1,17 @@
+// Borders
+$def_border: 1px solid;
+$progress_border: 2px solid;
+$def_border_rad_n: 0;
+$def_border_rad_s: 2px;
+$def_border_rad_m: 4px;
+$def_border_rad_l: 8px;
+
+// Margin, padding, spacing...
+$pad_n: 0;
+$pad_s: 4px;
+$pad_m: 8px;
+$pad_l: 16px;
+$pad_xl: 32px;
+
+// Shadows
+$def_shadow: 0 0 8px transparentize($accent_color, 0.5);
