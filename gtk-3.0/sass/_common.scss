@@ -3184,19 +3184,31 @@ headerbar,
       }
     }
 
-    &.maximize,
+    &.maximize {
+      @include draw_circle($wm_button_bg);
+
+      &:backdrop { @include draw-circle($wm_button_bg); } // The backdrop selector is for unfocused windows
+      &:hover {
+        color: $selected_fg_color;
+        @include draw-circle($wm_button_max_hover_bg);
+      }
+      &:active {
+        color: $wm_button_max_hover_bg;
+        @include draw-circle($wm_button_max_active_bg);
+      }
+    }
+
     &.minimize {
       @include draw_circle($wm_button_bg);
 
-      &:backdrop { @include draw-circle($wm_button_bg); }
-      &:hover,
-      &:hover:backdrop {
-        color: $fg_color;
-        @include draw-circle($wm_button_hover_bg);
+      &:backdrop { @include draw-circle($wm_button_bg); } // The backdrop selector is for unfocused windows
+      &:hover {
+        color: $selected_fg_color;
+        @include draw-circle($wm_button_min_hover_bg);
       }
-      &:active,
-      &:active:backdrop {
-        @include draw-circle($wm_button_active_bg);
+      &:active {
+        color: $wm_button_min_hover_bg;
+        @include draw-circle($wm_button_min_active_bg);
       }
     }
   }

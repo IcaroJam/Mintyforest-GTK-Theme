@@ -143,9 +143,13 @@ $wm_button_bg: $def_bg_1;
 $wm_button_close_hover_bg: $def_red;
 $wm_button_close_active_bg: $def_bg_red;
 
-// Minimize, Maximize
-$wm_button_hover_bg: $bg_hover_color;
-$wm_button_active_bg: $bg_active_color;
+// Maximize
+$wm_button_max_hover_bg: $def_green;
+$wm_button_max_active_bg: $def_bg_green;
+
+// Minimize
+$wm_button_min_hover_bg: $def_yellow;
+$wm_button_min_active_bg: $def_bg_yellow;
 
 // Terminal color
 $terminal_bg: $def_bg_0;

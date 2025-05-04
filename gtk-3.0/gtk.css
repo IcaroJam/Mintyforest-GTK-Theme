@@ -2864,27 +2864,34 @@ headerbar button.titlebutton,
     .titlebar button.titlebutton.close:active {
       color: #e67e80;
       background-image: -gtk-gradient(radial, center center, 0, center center, 0.5, to(#4c3743), to(transparent)); }
-  headerbar button.titlebutton.maximize, headerbar button.titlebutton.minimize,
-  .titlebar button.titlebutton.maximize,
+  headerbar button.titlebutton.maximize,
+  .titlebar button.titlebutton.maximize {
+    background-image: -gtk-gradient(radial, center center, 0, center center, 0.5, to(#2e383c), to(transparent)); }
+    headerbar button.titlebutton.maximize:backdrop,
+    .titlebar button.titlebutton.maximize:backdrop {
+      background-image: -gtk-gradient(radial, center center, 0, center center, 0.5, to(#2e383c), to(transparent)); }
+    headerbar button.titlebutton.maximize:hover,
+    .titlebar button.titlebutton.maximize:hover {
+      color: #272e33;
+      background-image: -gtk-gradient(radial, center center, 0, center center, 0.5, to(#a7c080), to(transparent)); }
+    headerbar button.titlebutton.maximize:active,
+    .titlebar button.titlebutton.maximize:active {
+      color: #a7c080;
+      background-image: -gtk-gradient(radial, center center, 0, center center, 0.5, to(#3c4841), to(transparent)); }
+  headerbar button.titlebutton.minimize,
   .titlebar button.titlebutton.minimize {
     background-image: -gtk-gradient(radial, center center, 0, center center, 0.5, to(#2e383c), to(transparent)); }
-    headerbar button.titlebutton.maximize:backdrop, headerbar button.titlebutton.minimize:backdrop,
-    .titlebar button.titlebutton.maximize:backdrop,
+    headerbar button.titlebutton.minimize:backdrop,
     .titlebar button.titlebutton.minimize:backdrop {
       background-image: -gtk-gradient(radial, center center, 0, center center, 0.5, to(#2e383c), to(transparent)); }
-    headerbar button.titlebutton.maximize:hover, headerbar button.titlebutton.maximize:hover:backdrop, headerbar button.titlebutton.minimize:hover, headerbar button.titlebutton.minimize:hover:backdrop,
-    .titlebar button.titlebutton.maximize:hover,
-    .titlebar button.titlebutton.maximize:hover:backdrop,
-    .titlebar button.titlebutton.minimize:hover,
-    .titlebar button.titlebutton.minimize:hover:backdrop {
-      color: #d3c6aa;
-      background-image: -gtk-gradient(radial, center center, 0, center center, 0.5, to(#374145), to(transparent)); }
-    headerbar button.titlebutton.maximize:active, headerbar button.titlebutton.maximize:active:backdrop, headerbar button.titlebutton.minimize:active, headerbar button.titlebutton.minimize:active:backdrop,
-    .titlebar button.titlebutton.maximize:active,
-    .titlebar button.titlebutton.maximize:active:backdrop,
-    .titlebar button.titlebutton.minimize:active,
-    .titlebar button.titlebutton.minimize:active:backdrop {
-      background-image: -gtk-gradient(radial, center center, 0, center center, 0.5, to(#414b50), to(transparent)); }
+    headerbar button.titlebutton.minimize:hover,
+    .titlebar button.titlebutton.minimize:hover {
+      color: #272e33;
+      background-image: -gtk-gradient(radial, center center, 0, center center, 0.5, to(#dbbc7f), to(transparent)); }
+    headerbar button.titlebutton.minimize:active,
+    .titlebar button.titlebutton.minimize:active {
+      color: #dbbc7f;
+      background-image: -gtk-gradient(radial, center center, 0, center center, 0.5, to(#45443c), to(transparent)); }
 
 .caja-navigation-window .view .cell:selected, .caja-navigation-window iconview .cell:selected, .caja-navigation-window .view .cell:selected:focus, .nemo-window .nemo-inactive-pane .view:selected:focus, .nemo-window .nemo-inactive-pane iconview:selected:focus, .nemo-window .nemo-inactive-pane .view:selected, .nemo-window .nemo-inactive-pane iconview:selected, .nemo-window .nemo-window-pane widget.entry:selected:focus, .nemo-window .nemo-window-pane widget.entry:selected, .nautilus-window placessidebar.sidebar list row.sidebar-row.has-open-popup:selected, .nautilus-window placessidebar.sidebar list row.sidebar-row:selected, .nautilus-window placessidebar.sidebar list row.sidebar-row:selected:hover, .nautilus-window placessidebar.sidebar list row.sidebar-row:active:hover,
 filechooser placessidebar.sidebar list row.sidebar-row.has-open-popup:selected,
@@ -3954,8 +3961,10 @@ window.background.lightdm .lightdm-combo {
 @define-color wm_button_bg #2e383c;
 @define-color wm_button_close_hover_bg #e67e80;
 @define-color wm_button_close_active_bg #4c3743;
-@define-color wm_button_hover_bg #374145;
-@define-color wm_button_active_bg #414b50;
+@define-color wm_button_max_hover_bg #a7c080;
+@define-color wm_button_max_active_bg #3c4841;
+@define-color wm_button_min_hover_bg #dbbc7f;
+@define-color wm_button_min_active_bg #45443c;
 /* Based on _Adwaita-base.scss from libhandy */
 popover.combo {
   padding: 0; }
