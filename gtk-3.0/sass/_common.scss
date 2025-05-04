@@ -828,10 +828,10 @@ toolbar {
     &.top,
     &.bottom { border-radius: 0; } // positional classes for `attached` osd toolbars
 
-    &.top { border-width: 0 0 1px 0; }
-    &.bottom { border-width: 1px 0 0 0; }
-    &.left { border-width: 0 1px 0 0; }
-    &.right { border-width: 0 0 0 1px; }
+    &.top { border-width: 0 0 $def_border_width 0; }
+    &.bottom { border-width: $def_border_width 0 0 0; }
+    &.left { border-width: 0 $def_border_width 0 0; }
+    &.right { border-width: 0 0 0 $def_border_width; }
   }
 
   &:not(.inline-toolbar) {
@@ -853,10 +853,10 @@ toolbar {
   color: $header_fg;
   background-color: opacify($header_bg, 1);
   box-shadow: none;
-  border-width: 0 0 1px 0;
+  border-width: 0 0 $def_border_width 0;
   border-style: solid;
-  border-image: linear-gradient(to bottom, opacify($header_bg, 1),
-                                           darken($header_bg, 12%)) 1 0 1 0; //temporary hack for rhythmbox 3.1
+  border-image: linear-gradient(to bottom, opacify($borders_color, 1),
+                                           opacify($borders_color, 1)) 1 0 1 0; //temporary hack for rhythmbox 3.1
 
   separator { @extend %header_separator; }
 }
@@ -869,7 +869,7 @@ toolbar {
   background-color: $bg_color;
   border-style: solid;
   border-color: $borders_color;
-  border-width: 0 1px 1px;
+  border-width: 0 $def_border_width $def_border_width;
   padding: $pad_s;
   border-radius: $def_border_rad_n $def_border_rad_n $def_border_rad_m $def_border_rad_m;
 }
@@ -878,7 +878,7 @@ searchbar {
   background-color: $bg_color;
   border-style: solid;
   border-color: $borders_color;
-  border-width: 0 0 1px;
+  border-width: 0 0 $def_border_width;
   padding: $pad_s;
 }
 
@@ -896,10 +896,8 @@ headerbar,
   min-height: 46px;
   padding: $pad_n $pad_m;
 
-  border-width: 0 0 1px;
-  border-style: solid;
+  border: none;
   border-radius: $def_border_rad_l $def_border_rad_l $def_border_rad_n $def_border_rad_n;
-  border-color: opacify($header_border, 1);
 
   color: $header_fg;
   background-color: opacify($header_bg, 1);
@@ -907,7 +905,6 @@ headerbar,
 
   .csd & {  // Transparent header-bars only in csd windows
     background-color: $header_bg;
-    border-color: $header_border;
   }
 
   &:backdrop {
@@ -3065,7 +3062,7 @@ button.circular-button,
 // Window Decorations
 //
 decoration {
-  border-radius: $def_border_rad_l;
+  border-radius: $def_border_rad_l $def_border_rad_l 0 0;
   border-width: 0;
 
   box-shadow: $def_shadow,
@@ -3094,6 +3091,11 @@ decoration {
   .tiled-bottom &,
   .tiled-left & {
     border-radius: 0;
+    box-shadow: $def_border_shadow; //transparent control workaround -- #3670
+
+    &:backdrop { box-shadow: $def_border_shadow,
+                 0 0 0 20px transparent; // #3670
+    }
   }
 
   .popup & {
@@ -3107,7 +3109,7 @@ decoration {
   .ssd.maximized &:backdrop { box-shadow: none; }
 
   .csd.popup & {
-    border-radius: $def_border_rad_l;
+    border-radius: $def_border_rad_m;
     box-shadow: $def_shadow,
                 $def_border_shadow;
   }
@@ -3121,8 +3123,8 @@ decoration {
   .solid-csd & {
     border-radius: 0;
     margin: 0;
-    padding: $pad_s;
     background-color: $header_bg;
+    border: $def_border $borders_color;
     box-shadow: none;
   }
 }

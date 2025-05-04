@@ -740,7 +740,7 @@ toolbar, .inline-toolbar {
   box-shadow: none;
   border-width: 0 0 1px 0;
   border-style: solid;
-  border-image: linear-gradient(to bottom, #1e2326, #030404) 1 0 1 0; }
+  border-image: linear-gradient(to bottom, #374145, #374145) 1 0 1 0; }
 
 .inline-toolbar {
   background-color: #272e33;
@@ -766,16 +766,13 @@ headerbar,
 .titlebar:not(headerbar) {
   min-height: 46px;
   padding: 0 8px;
-  border-width: 0 0 1px;
-  border-style: solid;
+  border: none;
   border-radius: 8px 8px 0 0;
-  border-color: #374145;
   color: #d3c6aa;
   background-color: #1e2326;
-  box-shadow: inset 0 1px #374145; }
+  box-shadow: inset 0 1px #495156; }
   .csd headerbar, .csd .titlebar:not(headerbar) {
-    background-color: #1e2326;
-    border-color: #374145; }
+    background-color: #1e2326; }
   headerbar:backdrop,
   .titlebar:backdrop:not(headerbar) {
     color: rgba(211, 198, 170, 0.6); }
@@ -2775,7 +2772,7 @@ button.circular-button,
   box-shadow: inset 0 0 0 1px #83c092; }
 
 decoration {
-  border-radius: 8px;
+  border-radius: 8px 8px 0 0;
   border-width: 0;
   box-shadow: 0 0 8px rgba(131, 192, 146, 0.5), 0 0 0 1px #374145;
   margin: 10px; }
@@ -2785,7 +2782,10 @@ decoration {
     border-radius: 0;
     box-shadow: none; }
   .tiled decoration, .tiled-top decoration, .tiled-right decoration, .tiled-bottom decoration, .tiled-left decoration {
-    border-radius: 0; }
+    border-radius: 0;
+    box-shadow: 0 0 0 1px #374145; }
+    .tiled decoration:backdrop, .tiled-top decoration:backdrop, .tiled-right decoration:backdrop, .tiled-bottom decoration:backdrop, .tiled-left decoration:backdrop {
+      box-shadow: 0 0 0 1px #374145, 0 0 0 20px transparent; }
   .popup decoration {
     box-shadow: none;
     border: none; }
@@ -2796,7 +2796,7 @@ decoration {
   .ssd.maximized decoration, .ssd.maximized decoration:backdrop {
     box-shadow: none; }
   .csd.popup decoration {
-    border-radius: 8px;
+    border-radius: 4px;
     box-shadow: 0 0 8px rgba(131, 192, 146, 0.5), 0 0 0 1px #374145; }
   tooltip.csd decoration {
     border-radius: 8px;
@@ -2806,8 +2806,8 @@ decoration {
   .solid-csd decoration {
     border-radius: 0;
     margin: 0;
-    padding: 4px;
     background-color: #1e2326;
+    border: 1px solid #374145;
     box-shadow: none; }
 
 headerbar.default-decoration button.titlebutton,
@@ -3954,7 +3954,7 @@ window.background.lightdm .lightdm-combo {
 @define-color wm_title_unfocused #d3c6aa;
 @define-color wm_bg #1e2326;
 @define-color wm_bg_unfocused #1e2326;
-@define-color wm_highlight #374145;
+@define-color wm_highlight #495156;
 @define-color wm_border #374145;
 @define-color wm_border_unfocused #374145;
 @define-color wm_shadow alpha(black, 0.35);
