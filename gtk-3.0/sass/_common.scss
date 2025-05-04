@@ -20,11 +20,8 @@ $ease-out-quad: cubic-bezier(0.25, 0.46, 0.45, 0.94);
   -GtkDialog-action-area-border: $pad_l;
 
   // We use the outline properties to signal the focus properties
-  outline-color: transparent;
-  outline-style: solid;
-  outline-offset: -4px;
-  outline-width: 2px;
   -gtk-outline-radius: $def_border_rad_m;
+  outline: none;
 }
 
 
@@ -586,7 +583,7 @@ toolbar.inline-toolbar toolbutton {
 }
 
 %linked_middle {
-  border-radius: 0;
+  border-radius: $def_border_rad_n;
   margin-left: $pad_xs;
   margin-right: $pad_xs;
 }
@@ -594,6 +591,7 @@ toolbar.inline-toolbar toolbutton {
 %linked_left {
   border-top-left-radius: $def_border_rad_l;
   border-bottom-left-radius: $def_border_rad_l;
+  margin-left: $pad_n;
   margin-right: $pad_xs;
 }
 
@@ -601,6 +599,7 @@ toolbar.inline-toolbar toolbutton {
   border-top-right-radius: $def_border_rad_l;
   border-bottom-right-radius: $def_border_rad_l;
   margin-left: $pad_xs;
+  margin-right: $pad_n;
 }
 
 %linked_only_child {
@@ -843,10 +842,7 @@ toolbar {
     scale,
     entry,
     spinbutton,
-    button {
-      margin-right: 1px;
-      margin-bottom: 1px;
-    }
+    button {  }
     .linked > button,
     .linked > entry { margin-right:0; }
   }
@@ -1206,6 +1202,7 @@ headerbar {
   // special case for path-bars and stack-switchers
   .linked:not(.vertical):not(.path-bar).stack-switcher,
   .linked:not(.vertical).path-bar {
+    border-radius: $def_border_rad_l;
 
     > button {
       @include button(header);
