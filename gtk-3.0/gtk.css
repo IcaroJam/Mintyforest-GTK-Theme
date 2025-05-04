@@ -14,6 +14,8 @@
 .background {
   color: #d3c6aa;
   background-color: #272e33; }
+  .background.csd {
+    border-radius: 8px; }
 
 *:disabled {
   -gtk-icon-effect: dim; }
@@ -1456,7 +1458,7 @@ menu,
   .csd menu, .csd .menu {
     padding: 8px;
     border-radius: 8px;
-    border: none; }
+    border: 1px solid #374145; }
   menu separator, .csd menu separator,
   .menu separator, .csd .menu separator {
     margin: 4px 8px;
@@ -1533,7 +1535,7 @@ menu,
       border-color: transparent; }
 
 .csd .popup {
-  border-radius: 2px; }
+  border-radius: 8px; }
 
 popover,
 popover.background {
@@ -2289,7 +2291,7 @@ scrolledwindow junction {
 
 separator {
   margin: 2px;
-  background-color: transparent; }
+  background-color: red; }
 
 list {
   background-color: #1e2326;

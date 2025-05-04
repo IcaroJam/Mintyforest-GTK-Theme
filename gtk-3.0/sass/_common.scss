@@ -31,6 +31,10 @@ $ease-out-quad: cubic-bezier(0.25, 0.46, 0.45, 0.94);
 .background {
   color: $fg_color;
   background-color: $bg_color;
+
+  &.csd {
+    border-radius: $def_border_rad_l;
+  }
 }
 
 *:disabled { -gtk-icon-effect: dim; }
@@ -1581,7 +1585,7 @@ menu,
   .csd & {
     padding: $pad_m;
     border-radius: $def_border_rad_l;
-    border: none;
+    border: $def_border $borders_color;
   }
 
   separator,
@@ -1666,7 +1670,7 @@ menu,
   }
 }
 
-.csd .popup { border-radius: 2px; }
+.csd .popup { border-radius: $def_border_rad_l; }
 
 //
 // Popovers
