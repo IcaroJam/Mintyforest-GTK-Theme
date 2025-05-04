@@ -63,7 +63,7 @@ $header_bg: $def_bg_dim;
 $header_bg_backdrop: $def_bg_dim;
 
 $header_border: $borders_color;
-$header_highlight: $borders_color; // The little shine line on top of windows
+$header_highlight_color: $borders_color; // The little shine line on top of windows
 
 $header_fg: $fg_color;
 
@@ -119,6 +119,11 @@ $header_button_bg: $base_color;
 $header_button_border: $button_border;
 $header_button_hover_bg: $def_bg_1;
 
+$scrollbar_bg_color: $def_bg_dim;
+$scrollbar_fg_color: $def_bg_1;
+$scrollbar_fg_hover: $def_bg_2;
+$scrollbar_fg_active: $accent_color;
+
 $trough_color_treeview: $def_bg_1;
 $trough_color: $def_bg_1;
 
@@ -127,7 +132,7 @@ $wm_title: $fg_color;
 $wm_title_unfocused: $fg_color;
 $wm_bg: $header_bg;
 $wm_bg_unfocused: $header_bg;
-$wm_highlight: $header_highlight;
+$wm_highlight: $header_highlight_color;
 $wm_border: $header_border;
 $wm_border_unfocused: $header_border;
 
