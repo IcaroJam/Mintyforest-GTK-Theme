@@ -16,6 +16,8 @@
   background-color: #272e33; }
   .background.csd {
     border-radius: 8px; }
+  .background.maximized, .background.solid-csd {
+    border-radius: 0; }
 
 *:disabled {
   -gtk-icon-effect: dim; }
@@ -846,7 +848,8 @@ headerbar,
   .default-decoration.titlebar:not(headerbar) {
     min-height: 28px;
     padding: 4px 8px;
-    border-bottom-width: 0; }
+    border-bottom-width: 0;
+    border-radius: 8px 8px 0 0; }
     .maximized headerbar.default-decoration, .maximized .default-decoration.titlebar:not(headerbar) {
       background-color: #1e2326; }
   .solid-csd headerbar:backdrop:dir(rtl), .solid-csd headerbar:backdrop:dir(ltr), .solid-csd headerbar:dir(rtl), .solid-csd headerbar:dir(ltr), .solid-csd .titlebar:dir(rtl):not(headerbar), .solid-csd .titlebar:dir(ltr):not(headerbar) {
@@ -1542,11 +1545,10 @@ popover.background {
   padding: 4px;
   border-radius: 8px;
   background-clip: border-box;
-  background-color: #272e33;
-  box-shadow: 0 2px 6px 1px rgba(0, 0, 0, 0.35); }
+  background-color: #272e33; }
   .csd popover, popover, .csd popover.background,
   popover.background {
-    border: 1px solid #2c3437; }
+    border: 1px solid #374145; }
   popover separator,
   popover.background separator {
     background-color: #272e33; }
@@ -2404,7 +2406,7 @@ calendar {
     color: alpha(currentColor,0.65); }
 
 .dialog-action-area .button.text-button {
-  padding: 6px 16px; }
+  padding: 8px 16px; }
 
 .message-dialog .dialog-action-area .button {
   padding: 8px; }
@@ -2415,8 +2417,8 @@ calendar {
     background-color: #1e2326;
     border-bottom: 1px solid #0e1112; }
   .message-dialog.csd.background {
-    border-bottom-left-radius: 3px;
-    border-bottom-right-radius: 3px;
+    border-bottom-left-radius: 8px;
+    border-bottom-right-radius: 8px;
     border: none; }
   .message-dialog.csd .dialog-action-area .button {
     padding: 8px;

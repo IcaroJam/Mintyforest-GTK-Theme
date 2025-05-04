@@ -35,6 +35,12 @@ $ease-out-quad: cubic-bezier(0.25, 0.46, 0.45, 0.94);
   &.csd {
     border-radius: $def_border_rad_l;
   }
+
+  &.maximized,
+  &.solid-csd {
+      // No radius when windows maximized
+      border-radius: 0;
+  }
 }
 
 *:disabled { -gtk-icon-effect: dim; }
@@ -1005,6 +1011,7 @@ headerbar,
     min-height: 28px;
     padding: $pad_s $pad_m;
     border-bottom-width: 0;
+    border-radius: $def_border_rad_l $def_border_rad_l 0 0;
 
     .maximized & { background-color: opacify($header_bg, 1); }
   }
@@ -1683,9 +1690,7 @@ popover.background {
   background-clip: border-box;
   background-color: $_popover_bg;
 
-  box-shadow: 0 2px 6px 1px if($variant=='light', transparentize(black, 0.93), transparentize(black, 0.65));
-
-  .csd &, & { border: 1px solid darken($borders_color, 5%); }
+  .csd &, & { border: $def_border $borders_color; }
 
   & separator { background-color: $_popover_bg; }
   label.separator {
@@ -2537,11 +2542,11 @@ calendar {
 // Dialogs
 //
 .dialog-action-area .button.text-button {
-  padding: 6px 16px;
+  padding: $pad_m $pad_l;
 }
 
 .message-dialog .dialog-action-area .button {
-  padding: 8px;
+  padding: $pad_m;
 }
 
 .message-dialog { // Message Dialog styling
@@ -2551,12 +2556,12 @@ calendar {
 
   &.csd { // rounded bottom border styling for csd version
     &.background {
-      border-bottom-left-radius: 3px;
-      border-bottom-right-radius: 3px;
+      border-bottom-left-radius: $def_border_rad_l;
+      border-bottom-right-radius: $def_border_rad_l;
       border: none;
     }
     .dialog-action-area .button {
-      padding: 8px;
+      padding: $pad_m;
       border-radius: 0;
 
       @extend %middle_button;
