@@ -34,6 +34,7 @@ $ease-out-quad: cubic-bezier(0.25, 0.46, 0.45, 0.94);
 
   &.csd {
     border-radius: $def_border_rad_l;
+    background-color: transparent;
   }
 
   &.maximized,
@@ -2895,7 +2896,7 @@ tooltip {
   border-radius: $def_border_rad_l;
   border: $def_border $borders_color;
 
-  decoration { background-color: transparent; }
+  decoration { background-color: $tooltip_bg_color; }
 
   box-shadow: none;
 
@@ -3077,6 +3078,7 @@ button.circular-button,
 // Window Decorations
 //
 decoration {
+  background-color: $bg_color;
   border-radius: $def_border_rad_l $def_border_rad_l 0 0;
   border-width: 0;
 

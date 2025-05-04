@@ -15,7 +15,8 @@
   color: #d3c6aa;
   background-color: #272e33; }
   .background.csd {
-    border-radius: 8px; }
+    border-radius: 8px;
+    background-color: transparent; }
   .background.maximized, .background.solid-csd {
     border-radius: 0; }
 
@@ -2641,7 +2642,7 @@ tooltip {
     tooltip.background label {
       padding: 4px 8px; }
   tooltip decoration {
-    background-color: transparent; }
+    background-color: #1e2326; }
   tooltip * {
     background-color: transparent;
     color: #d3c6aa; }
@@ -2771,6 +2772,7 @@ button.circular-button,
   box-shadow: inset 0 0 0 1px #83c092; }
 
 decoration {
+  background-color: #272e33;
   border-radius: 8px 8px 0 0;
   border-width: 0;
   box-shadow: 0 0 8px rgba(131, 192, 146, 0.5), 0 0 0 1px #374145;
