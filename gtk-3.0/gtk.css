@@ -45,6 +45,15 @@ iconview text,
 textview text {
   color: #d3c6aa;
   background-color: #272e33; }
+  .view:hover, iconview:hover,
+  .view text:hover,
+  iconview text:hover,
+  textview text:hover {
+    color: #83c092;
+    background-color: #2e383c;
+    border-color: #374145;
+    border-radius: 4px;
+    border: none; }
   .view:selected, iconview:selected, .view:selected:focus, iconview:selected:focus,
   .view text:selected,
   iconview text:selected,
