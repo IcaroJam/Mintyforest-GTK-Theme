@@ -380,8 +380,8 @@ button {
 
   &.image-button {
     min-width: 24px;
-    padding-left: $pad_m;
-    padding-right: $pad_m;
+    padding-left: $pad_s;
+    padding-right: $pad_s;
   }
 
   &.text-button {
@@ -390,8 +390,8 @@ button {
   }
 
   &.text-button.image-button {
-    padding-left: $pad_m;
-    padding-right: $pad_m;
+    padding-left: $pad_s;
+    padding-right: $pad_s;
 
     label {
       &:first-child {
@@ -403,8 +403,8 @@ button {
         padding-left: $pad_s;
       }
       &:only-child {
-        padding-left: $pad_m;
-        padding-right: $pad_m;
+        padding-left: $pad_s;
+        padding-right: $pad_s;
       }
     }
 
@@ -506,8 +506,8 @@ button {
       padding-right: $pad_m;
     }
     &.image-button {
-      padding-left: $pad_m;
-      padding-right: $pad_m;
+      padding-left: $pad_s;
+      padding-right: $pad_s;
     }
 
     &.needs-attention {
@@ -587,16 +587,20 @@ toolbar.inline-toolbar toolbutton {
 
 %linked_middle {
   border-radius: 0;
+  margin-left: $pad_xs;
+  margin-right: $pad_xs;
 }
 
 %linked_left {
   border-top-left-radius: $def_border_rad_l;
   border-bottom-left-radius: $def_border_rad_l;
+  margin-right: $pad_xs;
 }
 
 %linked_right {
   border-top-right-radius: $def_border_rad_l;
   border-bottom-right-radius: $def_border_rad_l;
+  margin-left: $pad_xs;
 }
 
 %linked_only_child {
@@ -778,8 +782,8 @@ spinbutton {
 //
 combobox {
   button.combo {                   // Otherwise combos
-    padding-top: $pad_m;               // are bigger than
-    padding-bottom: $pad_m;            // buttons
+    padding-top: $pad_s;               // are bigger than
+    padding-bottom: $pad_s;            // buttons
   }
   arrow {
     -gtk-icon-source: -gtk-icontheme('pan-down-symbolic');
@@ -1204,11 +1208,11 @@ headerbar {
   .linked:not(.vertical).path-bar {
 
     > button {
-      @include button(header-hover);
+      @include button(header);
 
-      &:hover { background-color: lighten($header_button_bg, 15%); }
+      &:hover { @include button(header-hover); }
       &:active, &:checked { @include button(header-active); }
-      &:disabled { color: transparentize($header_fg, 0.4); }
+      &:disabled { color: $insensitive_fg_color; }
 
       &, &:hover, &:active, &:checked, &:disabled { @extend %linked; }
     }
@@ -1378,8 +1382,8 @@ headerbar {
 //
 .path-bar button {
   &.text-button, &.image-button, & {
-    padding-left: $pad_m;
-    padding-right: $pad_m;
+    padding-left: $pad_s;
+    padding-right: $pad_s;
   }
 
   &.text-button.image-button label { padding-left: 0; padding-right: 0; }

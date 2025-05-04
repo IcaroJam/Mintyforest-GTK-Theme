@@ -293,15 +293,15 @@ button {
   button.image-button, headerbar button.titlebutton,
   .titlebar button.titlebutton {
     min-width: 24px;
-    padding-left: 8px;
-    padding-right: 8px; }
+    padding-left: 4px;
+    padding-right: 4px; }
   button.text-button {
     padding-left: 16px;
     padding-right: 16px; }
   button.text-button.image-button, headerbar button.text-button.titlebutton,
   .titlebar button.text-button.titlebutton {
-    padding-left: 8px;
-    padding-right: 8px; }
+    padding-left: 4px;
+    padding-right: 4px; }
     button.text-button.image-button label:first-child, headerbar button.text-button.titlebutton label:first-child,
     .titlebar button.text-button.titlebutton label:first-child {
       padding-left: 8px;
@@ -312,8 +312,8 @@ button {
       padding-left: 4px; }
     button.text-button.image-button label:only-child, headerbar button.text-button.titlebutton label:only-child,
     .titlebar button.text-button.titlebutton label:only-child {
-      padding-left: 8px;
-      padding-right: 8px; }
+      padding-left: 4px;
+      padding-right: 4px; }
     button.text-button.image-button.popup, headerbar button.text-button.popup.titlebutton,
     .titlebar button.text-button.popup.titlebutton {
       padding-right: 8px;
@@ -468,8 +468,8 @@ button {
     padding-right: 8px; }
   .stack-switcher > button.image-button, headerbar .stack-switcher > button.titlebutton,
   .titlebar .stack-switcher > button.titlebutton {
-    padding-left: 8px;
-    padding-right: 8px; }
+    padding-left: 4px;
+    padding-right: 4px; }
   .stack-switcher > button.needs-attention:active > label, .stack-switcher > button.needs-attention:active > image, .stack-switcher > button.needs-attention:checked > label, .stack-switcher > button.needs-attention:checked > image {
     animation: none;
     background-image: none; }
@@ -520,7 +520,9 @@ button {
 .primary-toolbar .linked.path-bar:not(.vertical) > button,
 .primary-toolbar .inline-toolbar .linked.path-bar:not(.vertical) > button,
 headerbar .linked.path-bar:not(.vertical) > button, spinbutton:not(.vertical) button, spinbutton:not(.vertical) entry, .linked:not(.vertical) > entry, .linked:not(.vertical) > entry:focus, .inline-toolbar button, .inline-toolbar button:backdrop, .linked:not(.vertical) > button, .linked:not(.vertical) > button:hover, .linked:not(.vertical) > button:active, .linked:not(.vertical) > button:checked, toolbar.inline-toolbar toolbutton > button.flat, .inline-toolbar toolbutton > button.flat {
-  border-radius: 0; }
+  border-radius: 0;
+  margin-left: 2px;
+  margin-right: 2px; }
 
 popover.combo scrollbar.vertical:dir(rtl), .linked:not(.vertical) > combobox:first-child > box > button.combo,
 .primary-toolbar .linked:not(.vertical) entry + button:first-child:last-child, headerbar .linked:not(.vertical) entry + button:first-child:last-child, .primary-toolbar toolbar .linked:not(.vertical):not(.path-bar).stack-switcher > button:first-child,
@@ -530,7 +532,8 @@ popover.combo scrollbar.vertical:dir(rtl), .linked:not(.vertical) > combobox:fir
 .primary-toolbar .inline-toolbar .linked:not(.vertical).path-bar > button:first-child,
 headerbar .linked:not(.vertical).path-bar > button:first-child, spinbutton:not(.vertical) button:first-child, spinbutton:not(.vertical) entry:first-child, .linked:not(.vertical) > entry:first-child, .inline-toolbar button:first-child, .inline-toolbar button:first-child:backdrop, .linked:not(.vertical) > button:first-child, toolbar.inline-toolbar toolbutton:first-child > button.flat, .inline-toolbar toolbutton:first-child > button.flat {
   border-top-left-radius: 8px;
-  border-bottom-left-radius: 8px; }
+  border-bottom-left-radius: 8px;
+  margin-right: 2px; }
 
 popover.combo scrollbar.vertical:dir(ltr), .linked:not(.vertical) > combobox:last-child > box > button.combo,
 .primary-toolbar .linked:not(.vertical) entry + button:last-child, headerbar .linked:not(.vertical) entry + button:last-child, .primary-toolbar toolbar .linked:not(.vertical):not(.path-bar).stack-switcher > button:last-child,
@@ -540,7 +543,8 @@ popover.combo scrollbar.vertical:dir(ltr), .linked:not(.vertical) > combobox:las
 .primary-toolbar .inline-toolbar .linked:not(.vertical).path-bar > button:last-child,
 headerbar .linked:not(.vertical).path-bar > button:last-child, spinbutton:not(.vertical) button:last-child, spinbutton:not(.vertical) entry:last-child, .linked:not(.vertical) > entry:last-child, .inline-toolbar button:last-child, .inline-toolbar button:last-child:backdrop, .linked:not(.vertical) > button:last-child, toolbar.inline-toolbar toolbutton:last-child > button.flat, .inline-toolbar toolbutton:last-child > button.flat {
   border-top-right-radius: 8px;
-  border-bottom-right-radius: 8px; }
+  border-bottom-right-radius: 8px;
+  margin-left: 2px; }
 
 .linked:not(.vertical) > combobox:only-child > box > button.combo,
 .primary-toolbar .linked:not(.vertical) entry + button:only-child:last-child, headerbar .linked:not(.vertical) entry + button:only-child:last-child, .primary-toolbar toolbar .linked:not(.vertical):not(.path-bar).stack-switcher > button:only-child,
@@ -682,8 +686,8 @@ spinbutton {
     border-top-color: #83c092; }
 
 combobox button.combo {
-  padding-top: 8px;
-  padding-bottom: 8px; }
+  padding-top: 4px;
+  padding-bottom: 4px; }
 
 combobox arrow {
   -gtk-icon-source: -gtk-icontheme("pan-down-symbolic");
@@ -1044,43 +1048,38 @@ headerbar .linked:not(.vertical):not(.path-bar) > button:not(:checked):not(:acti
 headerbar .linked:not(.vertical):not(.path-bar) > button:not(:checked):not(:active):not(.suggested-action):not(.destructive-action):disabled:not(:only-child) {
   box-shadow: none; }
 
-.primary-toolbar toolbar .linked:not(.vertical):not(.path-bar).stack-switcher > button,
-.primary-toolbar .linked:not(.vertical):not(.path-bar).stack-switcher > button, .primary-toolbar .inline-toolbar .linked:not(.vertical):not(.path-bar).stack-switcher > button, headerbar .linked:not(.vertical):not(.path-bar).stack-switcher > button,
-.primary-toolbar toolbar .linked:not(.vertical).path-bar > button,
-.primary-toolbar .linked:not(.vertical).path-bar > button,
-.primary-toolbar .inline-toolbar .linked:not(.vertical).path-bar > button,
-headerbar .linked:not(.vertical).path-bar > button {
+.primary-toolbar toolbar .linked:not(.vertical):not(.path-bar).stack-switcher > button:hover,
+.primary-toolbar .linked:not(.vertical):not(.path-bar).stack-switcher > button:hover, .primary-toolbar .inline-toolbar .linked:not(.vertical):not(.path-bar).stack-switcher > button:hover, headerbar .linked:not(.vertical):not(.path-bar).stack-switcher > button:hover,
+.primary-toolbar toolbar .linked:not(.vertical).path-bar > button:hover,
+.primary-toolbar .linked:not(.vertical).path-bar > button:hover,
+.primary-toolbar .inline-toolbar .linked:not(.vertical).path-bar > button:hover,
+headerbar .linked:not(.vertical).path-bar > button:hover {
   color: #83c092;
   background-color: #2e383c;
   border-color: #374145; }
-  .primary-toolbar toolbar .linked:not(.vertical):not(.path-bar).stack-switcher > button:hover,
-  .primary-toolbar .linked:not(.vertical):not(.path-bar).stack-switcher > button:hover, .primary-toolbar .inline-toolbar .linked:not(.vertical):not(.path-bar).stack-switcher > button:hover, headerbar .linked:not(.vertical):not(.path-bar).stack-switcher > button:hover,
-  .primary-toolbar toolbar .linked:not(.vertical).path-bar > button:hover,
-  .primary-toolbar .linked:not(.vertical).path-bar > button:hover,
-  .primary-toolbar .inline-toolbar .linked:not(.vertical).path-bar > button:hover,
-  headerbar .linked:not(.vertical).path-bar > button:hover {
-    background-color: #48555e; }
-  .primary-toolbar toolbar .linked:not(.vertical):not(.path-bar).stack-switcher > button:active,
-  .primary-toolbar .linked:not(.vertical):not(.path-bar).stack-switcher > button:active, .primary-toolbar .inline-toolbar .linked:not(.vertical):not(.path-bar).stack-switcher > button:active, headerbar .linked:not(.vertical):not(.path-bar).stack-switcher > button:active, .primary-toolbar toolbar .linked:not(.vertical):not(.path-bar).stack-switcher > button:checked,
-  .primary-toolbar .linked:not(.vertical):not(.path-bar).stack-switcher > button:checked, .primary-toolbar .inline-toolbar .linked:not(.vertical):not(.path-bar).stack-switcher > button:checked, headerbar .linked:not(.vertical):not(.path-bar).stack-switcher > button:checked,
-  .primary-toolbar toolbar .linked:not(.vertical).path-bar > button:active,
-  .primary-toolbar .linked:not(.vertical).path-bar > button:active,
-  .primary-toolbar .inline-toolbar .linked:not(.vertical).path-bar > button:active,
-  headerbar .linked:not(.vertical).path-bar > button:active,
-  .primary-toolbar toolbar .linked:not(.vertical).path-bar > button:checked,
-  .primary-toolbar .linked:not(.vertical).path-bar > button:checked,
-  .primary-toolbar .inline-toolbar .linked:not(.vertical).path-bar > button:checked,
-  headerbar .linked:not(.vertical).path-bar > button:checked {
-    color: #272e33;
-    background-color: #83c092;
-    border-color: #374145; }
-  .primary-toolbar toolbar .linked:not(.vertical):not(.path-bar).stack-switcher > button:disabled,
-  .primary-toolbar .linked:not(.vertical):not(.path-bar).stack-switcher > button:disabled, .primary-toolbar .inline-toolbar .linked:not(.vertical):not(.path-bar).stack-switcher > button:disabled, headerbar .linked:not(.vertical):not(.path-bar).stack-switcher > button:disabled,
-  .primary-toolbar toolbar .linked:not(.vertical).path-bar > button:disabled,
-  .primary-toolbar .linked:not(.vertical).path-bar > button:disabled,
-  .primary-toolbar .inline-toolbar .linked:not(.vertical).path-bar > button:disabled,
-  headerbar .linked:not(.vertical).path-bar > button:disabled {
-    color: rgba(211, 198, 170, 0.6); }
+
+.primary-toolbar toolbar .linked:not(.vertical):not(.path-bar).stack-switcher > button:active,
+.primary-toolbar .linked:not(.vertical):not(.path-bar).stack-switcher > button:active, .primary-toolbar .inline-toolbar .linked:not(.vertical):not(.path-bar).stack-switcher > button:active, headerbar .linked:not(.vertical):not(.path-bar).stack-switcher > button:active, .primary-toolbar toolbar .linked:not(.vertical):not(.path-bar).stack-switcher > button:checked,
+.primary-toolbar .linked:not(.vertical):not(.path-bar).stack-switcher > button:checked, .primary-toolbar .inline-toolbar .linked:not(.vertical):not(.path-bar).stack-switcher > button:checked, headerbar .linked:not(.vertical):not(.path-bar).stack-switcher > button:checked,
+.primary-toolbar toolbar .linked:not(.vertical).path-bar > button:active,
+.primary-toolbar .linked:not(.vertical).path-bar > button:active,
+.primary-toolbar .inline-toolbar .linked:not(.vertical).path-bar > button:active,
+headerbar .linked:not(.vertical).path-bar > button:active,
+.primary-toolbar toolbar .linked:not(.vertical).path-bar > button:checked,
+.primary-toolbar .linked:not(.vertical).path-bar > button:checked,
+.primary-toolbar .inline-toolbar .linked:not(.vertical).path-bar > button:checked,
+headerbar .linked:not(.vertical).path-bar > button:checked {
+  color: #272e33;
+  background-color: #83c092;
+  border-color: #374145; }
+
+.primary-toolbar toolbar .linked:not(.vertical):not(.path-bar).stack-switcher > button:disabled,
+.primary-toolbar .linked:not(.vertical):not(.path-bar).stack-switcher > button:disabled, .primary-toolbar .inline-toolbar .linked:not(.vertical):not(.path-bar).stack-switcher > button:disabled, headerbar .linked:not(.vertical):not(.path-bar).stack-switcher > button:disabled,
+.primary-toolbar toolbar .linked:not(.vertical).path-bar > button:disabled,
+.primary-toolbar .linked:not(.vertical).path-bar > button:disabled,
+.primary-toolbar .inline-toolbar .linked:not(.vertical).path-bar > button:disabled,
+headerbar .linked:not(.vertical).path-bar > button:disabled {
+  color: #495156; }
 
 
 .primary-toolbar .linked:not(.vertical) entry, headerbar .linked:not(.vertical) entry {
@@ -1317,8 +1316,8 @@ headerbar .linked:not(.vertical).path-bar > button {
 .path-bar button.text-button, .path-bar button.image-button, .path-bar headerbar button.titlebutton, headerbar .path-bar button.titlebutton,
 .path-bar .titlebar button.titlebutton,
 .titlebar .path-bar button.titlebutton, .path-bar button {
-  padding-left: 8px;
-  padding-right: 8px; }
+  padding-left: 4px;
+  padding-right: 4px; }
 
 .path-bar button.text-button.image-button label, .path-bar headerbar button.text-button.titlebutton label, headerbar .path-bar button.text-button.titlebutton label,
 .path-bar .titlebar button.text-button.titlebutton label,
