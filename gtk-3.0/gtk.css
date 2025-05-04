@@ -1764,7 +1764,6 @@ scrollbar {
     scrollbar.overlay-indicator:not(.dragging):not(.hovering).vertical slider {
       min-height: 24px; }
     scrollbar.overlay-indicator:not(.dragging):not(.hovering).horizontal slider {
-      margin: 0 2px;
       min-width: 24px; }
   scrollbar.overlay-indicator.dragging, scrollbar.overlay-indicator.hovering {
     opacity: 0.99; }
@@ -2245,7 +2244,8 @@ frame > border,
   margin: 0;
   padding: 0;
   border-radius: 0;
-  border: 1px solid #374145; }
+  border: 1px solid #374145;
+  border: none; }
 
 frame.flat > border,
 frame > border.flat,
@@ -2299,12 +2299,15 @@ scrolledwindow junction {
     border-image-slice: 0 1 0 0; }
 
 separator {
-  background-color: rgba(0, 0, 0, 0.1);
+  margin: 2px;
+  background-color: #495156;
+  background-color: transparent;
   min-width: 1px;
   min-height: 1px; }
 
 list {
-  background-color: #272e33;
+  background-color: #1e2326;
+  border-radius: 4px;
   border-color: #374145; }
   list row {
     padding: 4px; }
@@ -2315,7 +2318,7 @@ row:not(:hover) {
   transition: all 150ms cubic-bezier(0.25, 0.46, 0.45, 0.94); }
 
 row.activatable.has-open-popup, row.activatable:hover {
-  background-color: rgba(255, 255, 255, 0.05); }
+  background-color: initial; }
 
 row.activatable:active {
   color: #d3c6aa; }
