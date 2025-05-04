@@ -1915,12 +1915,10 @@ scrollbar {
 
       // w/o the following margin tweaks the slider shrinks when hovering/dragging
       &.vertical slider {
-        margin: 2px 0;
         min-height: $_slider_min_length;
       }
 
       &.horizontal slider {
-        margin: 0 2px;
         min-width: $_slider_min_length;
       }
 

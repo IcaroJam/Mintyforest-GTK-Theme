@@ -1762,7 +1762,6 @@ scrollbar {
       background-color: #2e383c;
       border-radius: 4px; }
     scrollbar.overlay-indicator:not(.dragging):not(.hovering).vertical slider {
-      margin: 2px 0;
       min-height: 24px; }
     scrollbar.overlay-indicator:not(.dragging):not(.hovering).horizontal slider {
       margin: 0 2px;
