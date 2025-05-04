@@ -880,8 +880,8 @@ headerbar,
   border-top-right-radius: 0; }
 
 headerbar entry, headerbar button, headerbar separator {
-  margin-top: 16px;
-  margin-bottom: 16px; }
+  margin-top: 8px;
+  margin-bottom: 8px; }
 
 separator:first-child + headerbar, separator:first-child + headerbar:backdrop, headerbar:first-child, headerbar:first-child:backdrop {
   border-top-left-radius: 16px; }

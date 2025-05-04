@@ -1053,8 +1053,8 @@ headerbar {
   @extend %header_widgets;
 
   entry, button, separator {
-    margin-top: $pad_l;
-    margin-bottom: $pad_l;
+    margin-top: $pad_m;
+    margin-bottom: $pad_m;
   }
 
   // Fixes split headerbars
