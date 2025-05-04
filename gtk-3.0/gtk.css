@@ -2290,8 +2290,15 @@ scrolledwindow junction {
     border-image-slice: 0 1 0 0; }
 
 separator {
+  background-color: #495156;
+  min-height: 1px;
+  min-width: 1px; }
+
+box > separator:first-child {
   margin: 2px;
-  background-color: red; }
+  background-color: transparent;
+  min-height: 0;
+  min-width: 0; }
 
 list {
   background-color: #1e2326;

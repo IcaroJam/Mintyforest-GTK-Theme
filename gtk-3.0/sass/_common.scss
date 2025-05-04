@@ -2396,8 +2396,16 @@ scrolledwindow {
 
 //vbox and hbox separators
 separator {
+  background-color: $separator_color;
+  min-height: 1px;
+  min-width: 1px;
+}
+
+box > separator:first-child { // Separators placed between lists
   margin: $pad_xs;
   background-color: transparent;
+  min-height: 0;
+  min-width: 0;
 }
 
 //
