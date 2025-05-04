@@ -102,7 +102,7 @@ iconview { @extend .view; }
 rubberband,
 .rubberband {
   border: $def_border $accent_color;
-  background-color: $def_bg_1;
+  background-color: transparentize($accent_color, 0.75);
 }
 
 flowbox {
