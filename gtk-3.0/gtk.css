@@ -1466,7 +1466,7 @@ menu,
   .csd menu, .csd .menu {
     padding: 8px;
     border-radius: 8px;
-    border: 1px solid #374145; }
+    border: none; }
   menu separator, .csd menu separator,
   .menu separator, .csd .menu separator {
     margin: 4px 8px;
@@ -1547,8 +1547,8 @@ menu,
 
 popover,
 popover.background {
-  padding: 2px;
-  border-radius: 3px;
+  padding: 4px;
+  border-radius: 8px;
   background-clip: border-box;
   background-color: #272e33;
   box-shadow: 0 2px 6px 1px rgba(0, 0, 0, 0.35); }
@@ -2244,7 +2244,6 @@ frame > border,
   margin: 0;
   padding: 0;
   border-radius: 0;
-  border: 1px solid #374145;
   border: none; }
 
 frame.flat > border,
@@ -2300,10 +2299,7 @@ scrolledwindow junction {
 
 separator {
   margin: 2px;
-  background-color: #495156;
-  background-color: transparent;
-  min-width: 1px;
-  min-height: 1px; }
+  background-color: transparent; }
 
 list {
   background-color: #1e2326;
@@ -2798,7 +2794,7 @@ decoration {
   .ssd.maximized decoration, .ssd.maximized decoration:backdrop {
     box-shadow: none; }
   .csd.popup decoration {
-    border-radius: 4px;
+    border-radius: 8px;
     box-shadow: 0 0 8px rgba(131, 192, 146, 0.5), 0 0 0 1px #374145; }
   tooltip.csd decoration {
     border-radius: 8px;

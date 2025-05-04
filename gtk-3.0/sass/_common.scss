@@ -1580,7 +1580,7 @@ menu,
   .csd & {
     padding: $pad_m;
     border-radius: $def_border_rad_l;
-    border: $def_border $borders_color;
+    border: none;
   }
 
   separator,
@@ -1672,10 +1672,9 @@ menu,
 //
 popover,
 popover.background {
-  $_popover_bg: if($variant=='light', $base_color, $bg_color);
-  padding: 2px;
-  // border: 1px solid darken($borders_color, 5%);
-  border-radius: 3px;
+  $_popover_bg: $bg_color;
+  padding: $pad_s;
+  border-radius: $def_border_rad_l;
   background-clip: border-box;
   background-color: $_popover_bg;
 
@@ -3107,7 +3106,7 @@ decoration {
   .ssd.maximized &:backdrop { box-shadow: none; }
 
   .csd.popup & {
-    border-radius: $def_border_rad_m;
+    border-radius: $def_border_rad_l;
     box-shadow: $def_shadow,
                 $def_border_shadow;
   }
