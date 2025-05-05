@@ -1440,6 +1440,10 @@ treeview.view {
 
   acceleditor > label { background-color: $selected_bg_color; }
 
+  &:hover { // This fixes the general .view hover from messing with nemo's hovering on the sidebar and main area
+    border-radius: 0;
+  }
+
   &:selected {
     &, &:focus {
       border-radius: 0;
@@ -2077,25 +2081,29 @@ scale {
   $_marks_distance: 1px;
   $_value_distance: 3px;
 
-  min-height: 15px;
-  min-width: 15px;
-  padding: 3px;
+  min-height: 16px;
+  min-width: 16px;
+  padding: $pad_xs;
 
   &.horizontal {
-    trough { padding: 0 4px; }
-    highlight, fill { margin: 0 -4px; }
+    trough { padding: 0 $pad_xs; }
+    highlight, fill { margin: 0 (-$pad_xs); }
   }
 
   &.vertical {
-    trough { padding: 4px 0; }
-    highlight, fill { margin: -4px 0; }
+    trough { padding: $pad_xs 0; }
+    highlight, fill { margin: (-$pad_xs) 0; }
   }
 
   // The slider is inside the trough, negative margin to make it bigger
   slider {
-    min-height: 15px;
-    min-width: 15px;
-    margin: -6px;
+    min-height: 16px;
+    min-width: 16px;
+    margin: -8px;
+
+    &:hover {
+      box-shadow: 0 0 0 $pad_s transparentize($accent_color, 0.75);
+    }
   }
 
   // Click-and-hold the slider to activate
@@ -2106,18 +2114,18 @@ scale {
     fill,
     highlight,
     trough {
-      border-radius: 5px;
-      -gtk-outline-radius: 7px;
+      border-radius: $def_border_rad_m;
+      -gtk-outline-radius: $def_border_rad_l;
     }
   }
 
   slider {
-    $_slider_border: if($variant=='light', transparentize(darken($button_border,25%), 0.5), darken($button_border,2%));
+    $_slider_border: $accent_color;
 
     background-clip: border-box;
     background-color: $button_bg;
-    border: 1px solid $_slider_border;
-    border-radius: 50%;
+    border: $def_border $_slider_border;
+    border-radius: 9999px;
     box-shadow: none;
 
     &:disabled {
@@ -2125,8 +2133,8 @@ scale {
       border-color: transparentize($_slider_border, 0.2);
     }
     &:active {
-      background-color: $selected_bg_color;
-      border-color: $selected_bg_color;
+      box-shadow: 0 0 0 $pad_s transparentize($accent_color, 0.75),
+                  inset 0 0 0 $def_border_width $accent_color;
     }
     //OSD sliders
     .osd & {

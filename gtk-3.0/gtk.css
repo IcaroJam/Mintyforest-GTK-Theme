@@ -1357,6 +1357,8 @@ treeview.view {
     -GtkTreeView-expander-size: 16; }
   treeview.view acceleditor > label {
     background-color: #83c092; }
+  treeview.view:hover {
+    border-radius: 0; }
   treeview.view:selected, treeview.view:selected:focus {
     border-radius: 0;
     border-left-color: #557763;
@@ -2040,40 +2042,42 @@ radio {
     margin: 0; }
 
 scale {
-  min-height: 15px;
-  min-width: 15px;
-  padding: 3px; }
+  min-height: 16px;
+  min-width: 16px;
+  padding: 2px; }
   scale.horizontal trough {
-    padding: 0 4px; }
+    padding: 0 2px; }
   scale.horizontal highlight, scale.horizontal fill {
-    margin: 0 -4px; }
+    margin: 0 -2px; }
   scale.vertical trough {
-    padding: 4px 0; }
+    padding: 2px 0; }
   scale.vertical highlight, scale.vertical fill {
-    margin: -4px 0; }
+    margin: -2px 0; }
   scale slider {
-    min-height: 15px;
-    min-width: 15px;
-    margin: -6px; }
+    min-height: 16px;
+    min-width: 16px;
+    margin: -8px; }
+    scale slider:hover {
+      box-shadow: 0 0 0 4px rgba(131, 192, 146, 0.25); }
   scale.fine-tune slider {
     margin: -4px; }
   scale.fine-tune fill,
   scale.fine-tune highlight,
   scale.fine-tune trough {
-    border-radius: 5px;
-    -gtk-outline-radius: 7px; }
+    border-radius: 4px;
+    -gtk-outline-radius: 8px; }
   scale slider {
     background-clip: border-box;
     background-color: #2e383c;
-    border: 1px solid #323c3f;
-    border-radius: 50%;
+    border: 1px solid #83c092;
+    border-radius: 9999px;
     box-shadow: none; }
     scale slider:disabled {
       background-color: #2b3438;
-      border-color: rgba(50, 60, 63, 0.8); }
+      border-color: rgba(131, 192, 146, 0.8); }
     scale slider:active {
-      background-color: #83c092;
-      border-color: #83c092; }
+      background-color: #1e2326;
+      box-shadow: 0 0 0 4px rgba(131, 192, 146, 0.25), inset 0 0 0 1px #83c092; }
     .osd scale slider {
       background-color: #272e33;
       border-color: #83c092; }
