@@ -279,7 +279,7 @@ NautilusListView .view { border-bottom: $def_border $borders_color; }
     -GtkTreeView-vertical-separator: 8;
 
     .view.cell:hover {
-      background-color: $bg_hover_color;
+      background-color: $def_bg_1;
       color: $accent_color;
       border-radius: 0;
     }
