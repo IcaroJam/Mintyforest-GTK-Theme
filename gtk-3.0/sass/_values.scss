@@ -16,6 +16,6 @@ $pad_l: 16px;
 $pad_xl: 32px;
 
 // Shadows
-$def_shadow: 0 0 8px transparentize($accent_color, 0.5);
+$def_shadow: 0 0 2px transparentize($accent_color, 0.5);
 $def_border_shadow: 0 0 0 $def_border_width $borders_color;
 $header_highlight: inset 0 1px $header_highlight_color;
