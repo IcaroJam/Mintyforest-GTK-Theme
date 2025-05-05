@@ -2060,7 +2060,7 @@ scale {
     scale slider:hover {
       box-shadow: 0 0 0 4px rgba(131, 192, 146, 0.25); }
   scale.fine-tune slider {
-    margin: -4px; }
+    margin: -6px; }
   scale.fine-tune fill,
   scale.fine-tune highlight,
   scale.fine-tune trough {
@@ -2076,7 +2076,6 @@ scale {
       background-color: #2b3438;
       border-color: rgba(131, 192, 146, 0.8); }
     scale slider:active {
-      background-color: #1e2326;
       box-shadow: 0 0 0 4px rgba(131, 192, 146, 0.25), inset 0 0 0 1px #83c092; }
     .osd scale slider {
       background-color: #272e33;
