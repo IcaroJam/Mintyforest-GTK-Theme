@@ -210,8 +210,8 @@ filechooser {
 }
 
 filechooser placessidebar > viewport.frame {
-  border: 1px solid $borders_color;
-  border-width: 1px 0 0 0;
+  border: $def_border $borders_color;
+  border-width: $def_border_width 0 0 0;
 }
 
 NautilusQueryEditor .search-bar.toolbar {
@@ -249,7 +249,7 @@ $disk_space_free: darken($bg_color, 3%);
 }
 
 // View
-NautilusListView .view { border-bottom: 1px solid $borders_color; }
+NautilusListView .view { border-bottom: $def_border $borders_color; }
 
 //
 // Nemo
@@ -259,8 +259,8 @@ NautilusListView .view { border-bottom: 1px solid $borders_color; }
 .nemo-window {
 
   .nemo-window-pane widget.entry {
-    border: 1px solid;
-    border-radius: 3px;
+    border: $def_border;
+    border-radius: $def_border_rad_m;
 
     @include entry(focus);
 
@@ -274,11 +274,15 @@ NautilusListView .view { border-bottom: 1px solid $borders_color; }
   }
 
   .places-treeview {
-    -NemoPlacesTreeView-disk-full-bg-color: if($variant == 'light', #aaaaaa, $dark_sidebar_fg);
-    -NemoPlacesTreeView-disk-full-fg-color: darken($selected_bg_color, 10%);
-    -GtkTreeView-vertical-separator: 7;
+    -NemoPlacesTreeView-disk-full-bg-color: $dark_sidebar_fg;
+    -NemoPlacesTreeView-disk-full-fg-color: $accent_color;
+    -GtkTreeView-vertical-separator: 8;
 
-    .view.cell:hover { background-color: transparentize($dark_sidebar_fg, 0.75); }
+    .view.cell:hover {
+      background-color: $bg_hover_color;
+      color: $accent_color;
+      border-radius: 0;
+    }
   }
 
   .nemo-places-sidebar.frame { border-width: 0; }
@@ -309,6 +313,11 @@ NautilusListView .view { border-bottom: 1px solid $borders_color; }
   /* This is to keep the separator next to the sidebar dark so we don't see a gap
      between it and the trash bar */
   grid > paned > separator { background-image: _solid($borders_color); }
+
+  // Spacing for the bottom bar
+  & widget .toolbar {
+    padding: $pad_s;
+  }
 
   // Fix padding of the statusbar buttons
   & widget .toolbar .image-button { padding: 0; }

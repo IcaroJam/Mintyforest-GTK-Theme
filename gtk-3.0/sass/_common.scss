@@ -2624,14 +2624,14 @@ filechooserbutton:drop(active) {
   &:dir(ltr),
   &.left,
   &.left:dir(rtl) {
-    border-right: 1px solid $borders_color;
+    border-right: $def_border $borders_color;
     border-left-style: none;
   }
 
   @at-root %sidebar_right,
   &:dir(rtl),
   &.right {
-    border-left: 1px solid $borders_color;
+    border-left: $def_border $borders_color;
     border-right-style: none;
   }
 

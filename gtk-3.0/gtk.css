@@ -3160,7 +3160,7 @@ NautilusListView .view, NautilusListView iconview {
      between it and the trash bar */ }
   .nemo-window .nemo-window-pane widget.entry {
     border: 1px solid;
-    border-radius: 3px;
+    border-radius: 4px;
     color: #d3c6aa;
     border-color: #83c092;
     background-color: #2e383c; }
@@ -3168,10 +3168,12 @@ NautilusListView .view, NautilusListView iconview {
     background-color: #1c2125; }
   .nemo-window .places-treeview {
     -NemoPlacesTreeView-disk-full-bg-color: #d3c6aa;
-    -NemoPlacesTreeView-disk-full-fg-color: #61af74;
-    -GtkTreeView-vertical-separator: 7; }
+    -NemoPlacesTreeView-disk-full-fg-color: #83c092;
+    -GtkTreeView-vertical-separator: 8; }
     .nemo-window .places-treeview .view.cell:hover, .nemo-window .places-treeview iconview.cell:hover {
-      background-color: rgba(211, 198, 170, 0.25); }
+      background-color: #374145;
+      color: #83c092;
+      border-radius: 0; }
   .nemo-window .nemo-places-sidebar.frame {
     border-width: 0; }
   .nemo-window .sidebar {
@@ -3191,6 +3193,8 @@ NautilusListView .view, NautilusListView iconview {
           color: #d3c6aa; }
   .nemo-window grid > paned > separator {
     background-image: linear-gradient(to bottom, #374145, #374145); }
+  .nemo-window widget .toolbar {
+    padding: 4px; }
   .nemo-window widget .toolbar .image-button, .nemo-window widget .toolbar headerbar button.titlebutton, headerbar .nemo-window widget .toolbar button.titlebutton,
   .nemo-window widget .toolbar .titlebar button.titlebutton,
   .titlebar .nemo-window widget .toolbar button.titlebutton {
