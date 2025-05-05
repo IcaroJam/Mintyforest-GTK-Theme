@@ -228,7 +228,7 @@ entry {
       color: #83c092;
       background-color: #272e33; }
   entry progress {
-    margin: -4px;
+    margin: 4px -8px;
     border-radius: 0;
     border-bottom: 2px solid #83c092;
     background-image: none;

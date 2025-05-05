@@ -287,7 +287,7 @@ entry {
   }
 
   progress {
-    margin: $pad_s -$pad_m;
+    margin: $pad_s (-$pad_m);
     border-radius: $def_border_rad_n;
     border-bottom: $progress_border $selected_bg_color;
     background-image: none;
@@ -1676,7 +1676,7 @@ menu,
     }
     &.bottom {
       margin-top: $pad_l;
-      margin-bottom: -$pad_l;
+      margin-bottom: (-$pad_l);
       -gtk-icon-source: -gtk-icontheme('pan-down-symbolic');
     }
     &:hover { background-color: $bg_hover_color; }
