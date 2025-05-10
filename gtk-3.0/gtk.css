@@ -2258,6 +2258,9 @@ frame > border.flat,
 .frame.flat {
   border-style: none; }
 
+scrolledwindow.frame {
+  border: 1px solid #374145; }
+
 scrolledwindow viewport.frame {
   border-style: none; }
 

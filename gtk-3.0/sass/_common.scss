@@ -2390,6 +2390,10 @@ frame > border.flat,
   border-style: none;
 }
 
+scrolledwindow.frame { // This ensures borders in things like the network settings while keeping theme settings dark cells borderless
+  border: $def_border $borders_color;
+}
+
 scrolledwindow {
   viewport.frame { // avoid double borders when viewport inside scrolled window
     border-style: none;
