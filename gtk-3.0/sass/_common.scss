@@ -1974,7 +1974,7 @@ switch {
   border-radius: 9999px;
 
   slider {
-    transition: all 75ms ease-in-out;
+    transition: inherit;
     min-width: $pad_l;
     min-height: $pad_l;
     margin: $pad_xs;
@@ -1992,6 +1992,10 @@ switch {
     slider {
       background-color: $def_bg_0;
     }
+  }
+
+  &:checked:disabled {
+    background-color: transparentize($accent_color, 0.75);
   }
 
   &:focus slider,

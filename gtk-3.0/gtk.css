@@ -1795,7 +1795,7 @@ switch {
   background-clip: padding-box;
   border-radius: 9999px; }
   switch slider {
-    transition: all 75ms ease-in-out;
+    transition: inherit;
     min-width: 16px;
     min-height: 16px;
     margin: 2px;
@@ -1807,6 +1807,8 @@ switch {
     background-color: #374145; }
     switch:disabled slider {
       background-color: #272e33; }
+  switch:checked:disabled {
+    background-color: rgba(131, 192, 146, 0.25); }
   switch:focus slider, switch:hover slider, switch:focus:hover slider {
     box-shadow: 0 0 0 4px rgba(131, 192, 146, 0.5); }
 
