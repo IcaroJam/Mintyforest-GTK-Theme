@@ -1966,47 +1966,38 @@ scrollbar {
 // Switches
 //
 switch {
-  font-size: 1px;
-  min-width: 52px;
-  min-height: 24px;
-  background-size: 52px 24px;
-  background-repeat: no-repeat;
-  background-position: center center;
+  transition: all 75ms ease-in-out;
+  font-size: 0;
+  color: transparent;
+  background-color: $def_bg_5;
+  background-clip: padding-box;
+  border-radius: 9999px;
 
   slider {
-    min-width: 1px;
-    min-height: 1px;
+    transition: all 75ms ease-in-out;
+    min-width: $pad_l;
+    min-height: $pad_l;
+    margin: $pad_xs;
+    border-radius: inherit;
+    background-color: $def_bg_dim;
   }
 
-  &, slider {
-    outline-color: transparent;
-    color: transparent;
-    border: none;
-    box-shadow: none;
-  }
-}
-
-@each $k,$l in ('',''),
-               (':checked','-active'),
-               (':disabled','-insensitive'),
-               (':checked:disabled','-active-insensitive') {
-
-  // load switch troughs from .png files in assets directory
-
-  switch#{$k} {
-    background-image: -gtk-scaled(url("assets/switch#{$l}.png"),url("assets/switch#{$l}@2.png"));
+  &:checked {
+    background-color: $accent_color;
   }
 
-  menuitem:hover switch#{$k},
-  row:selected switch#{$k},
-  infobar switch#{$k} {
-    background-image: -gtk-scaled(url("assets/switch#{$l}-selected.png"),url("assets/switch#{$l}-selected@2.png"));
+  &:disabled {
+    background-color: $def_bg_2;
+
+    slider {
+      background-color: $def_bg_0;
+    }
   }
 
-  headerbar switch#{$k},
-  .primary-toolbar switch#{$k},
-  .primary-toolbar toolbar switch#{$k} {
-    background-image: -gtk-scaled(url("assets/switch#{$l}-header.png"),url("assets/switch#{$l}-header@2.png"));
+  &:focus slider,
+  &:hover slider,
+  &:focus:hover slider {
+    box-shadow: 0 0 0 $pad_s transparentize($accent_color, 0.5);
   }
 }
 
