@@ -15,8 +15,7 @@
   color: #d3c6aa;
   background-color: #272e33; }
   .background.csd {
-    border-radius: 8px;
-    background-color: transparent; }
+    border-radius: 8px; }
   .background.maximized, .background.solid-csd {
     border-radius: 0; }
 
