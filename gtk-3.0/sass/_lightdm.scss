@@ -32,6 +32,10 @@
   color: $fg_color;
 }
 
+#login_window entry {
+  padding: $pad_s $pad_m;
+}
+
 // the top half of the login-window, in GtkDialog terms, the content
 #content_frame {
   padding-bottom: $pad_l;

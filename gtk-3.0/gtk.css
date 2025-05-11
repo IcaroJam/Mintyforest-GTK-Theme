@@ -3778,6 +3778,9 @@ EvWindow .content-view .view:focus:selected {
   background-color: transparent;
   color: #d3c6aa; }
 
+#login_window entry {
+  padding: 4px 8px; }
+
 #content_frame {
   padding-bottom: 16px;
   background-color: #272e33;
