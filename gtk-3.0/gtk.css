@@ -1613,7 +1613,7 @@ notebook {
   notebook > stack:not(:only-child) {
     background-color: #272e33; }
   notebook > header {
-    padding: 2px;
+    padding: 4px;
     background-color: #272e33;
     /* button in headers */ }
     notebook > header.top {
@@ -1627,49 +1627,49 @@ notebook {
     notebook > header.top {
       padding-bottom: 0; }
       notebook > header.top > tabs > tab {
-        padding: 2px 10px;
+        padding: 4px 8px;
         min-width: 20px;
         min-height: 20px;
         outline-offset: -4px;
         border: 1px solid transparent;
         border-bottom: none;
-        border-radius: 1px 1px 0 0; }
+        border-radius: 4px 4px 0 0; }
         notebook > header.top > tabs > tab + tab {
           margin-left: -1px; }
     notebook > header.bottom {
       padding-top: 0; }
       notebook > header.bottom > tabs > tab {
-        padding: 2px 10px;
+        padding: 4px 8px;
         min-width: 20px;
         min-height: 20px;
         outline-offset: -4px;
         border: 1px solid transparent;
         border-top: none;
-        border-radius: 0 0 1px 1px; }
+        border-radius: 0 0 4px 4px; }
         notebook > header.bottom > tabs > tab + tab {
           margin-left: -1px; }
     notebook > header.right {
       padding-left: 0; }
       notebook > header.right > tabs > tab {
-        padding: 2px 10px;
+        padding: 4px 8px;
         min-width: 20px;
         min-height: 20px;
         outline-offset: -4px;
         border: 1px solid transparent;
         border-left: none;
-        border-radius: 0 1px 1px 0; }
+        border-radius: 0 4px 4px 0; }
         notebook > header.right > tabs > tab + tab {
           margin-top: -1px; }
     notebook > header.left {
       padding-right: 0; }
       notebook > header.left > tabs > tab {
-        padding: 2px 10px;
+        padding: 4px 8px;
         min-width: 20px;
         min-height: 20px;
         outline-offset: -4px;
         border: 1px solid transparent;
         border-right: none;
-        border-radius: 1px 0 0 1px; }
+        border-radius: 4px 0 0 4px; }
         notebook > header.left > tabs > tab + tab {
           margin-top: -1px; }
     notebook > header.top > tabs > arrow.up, notebook > header.bottom > tabs > arrow.up {
@@ -1704,13 +1704,20 @@ notebook {
       box-shadow: inset -1px 0 #374145; }
     notebook > header.right > tabs > tab:hover:not(:checked) {
       box-shadow: inset 1px 0 #374145; }
+    notebook > header.top > tabs > tab:not(:checked) {
+      border-bottom: 1px solid #374145; }
+    notebook > header.bottom > tabs > tab:not(:checked) {
+      border-top: 1px solid #374145; }
+    notebook > header.left > tabs > tab:not(:checked) {
+      border-right: 1px solid #374145; }
+    notebook > header.right > tabs > tab:not(:checked) {
+      border-left: 1px solid #374145; }
     notebook > header > tabs > tab {
       color: #495156;
-      background-color: rgba(39, 46, 51, 0); }
+      background-color: #1e2326; }
       notebook > header > tabs > tab:hover:not(:checked) {
         color: #8e8c80;
-        background-color: rgba(39, 46, 51, 0.5);
-        border-color: #374145; }
+        background-color: #2e383c; }
       notebook > header > tabs > tab:checked {
         color: #d3c6aa;
         background-color: #272e33;
@@ -1721,7 +1728,7 @@ notebook {
         padding: 0;
         color: #979180; }
         notebook > header > tabs > tab button.flat:hover {
-          color: #ff4d4d; }
+          color: #e67e80; }
         notebook > header > tabs > tab button.flat:active, notebook > header > tabs > tab button.flat:active:hover {
           color: #83c092; }
     notebook > header button.flat {

@@ -1742,7 +1742,7 @@ notebook {
   padding: 0;
 
   &.frame {
-    border: 1px solid $borders_color;
+    border: $def_border $borders_color;
 
     > header {
       // ugly hack to hide the borders around the header
@@ -1762,7 +1762,7 @@ notebook {
   }
 
   > header {
-    padding: 2px;
+    padding: $pad_s;
     background-color: $bg_color;
 
     &.top {    box-shadow: inset  0  -1px $borders_color; }
@@ -1776,13 +1776,13 @@ notebook {
         padding-#{$_bpos}: 0;
 
         > tabs > tab {
-          padding: 2px 10px;
+          padding: $pad_s $pad_m;
           min-width: 20px;
           min-height: 20px;
 
           outline-offset: -4px;
 
-          border: 1px solid transparent;
+          border: $def_border transparent;
           border-#{$_bpos}: none;
 
           // tab overlap
@@ -1792,10 +1792,10 @@ notebook {
           }
 
           // tab border radius
-          @if $_pos==top { border-radius: 1px 1px 0 0; }
-          @else if $_pos==bottom { border-radius: 0 0 1px 1px; }
-          @else if $_pos==left { border-radius: 1px 0 0 1px; }
-          @else if $_pos==right { border-radius: 0 1px 1px 0; }
+          @if $_pos==top { border-radius: $def_border_rad_m $def_border_rad_m 0 0; }
+          @else if $_pos==bottom { border-radius: 0 0 $def_border_rad_m $def_border_rad_m; }
+          @else if $_pos==left { border-radius: $def_border_rad_m 0 0 $def_border_rad_m; }
+          @else if $_pos==right { border-radius: 0 $def_border_rad_m $def_border_rad_m 0; }
         }
       }
     }
@@ -1803,21 +1803,21 @@ notebook {
     &.top, &.bottom {
       > tabs > arrow.up {
         -gtk-icon-source: -gtk-icontheme('pan-end-symbolic');
-        &:last-child { margin-left: 2px; }
+        &:last-child { margin-left: $pad_xs; }
       }
       > tabs > arrow.down {
         -gtk-icon-source: -gtk-icontheme('pan-start-symbolic');
-        &:first-child { margin-right: 2px; }
+        &:first-child { margin-right: $pad_xs; }
       }
     }
     &.left, &.right {
       > tabs > arrow.up {
         -gtk-icon-source: -gtk-icontheme('pan-down-symbolic');
-        &:last-child { margin-top: 2px; }
+        &:last-child { margin-top: $pad_xs; }
       }
       > tabs > arrow.down {
         -gtk-icon-source: -gtk-icontheme('pan-up-symbolic');
-        &:first-child { margin-bottom: 2px; }
+        &:first-child { margin-bottom: $pad_xs; }
       }
     }
     > tabs > arrow {
@@ -1835,14 +1835,18 @@ notebook {
     &.left > tabs > tab:hover:not(:checked) { box-shadow: inset -1px 0 $borders_color; }
     &.right > tabs > tab:hover:not(:checked) { box-shadow: inset 1px 0 $borders_color; }
 
+    &.top > tabs > tab:not(:checked) { border-bottom: $def_border $borders_color; }
+    &.bottom > tabs > tab:not(:checked) { border-top: $def_border $borders_color; }
+    &.left > tabs > tab:not(:checked) { border-right: $def_border $borders_color; }
+    &.right > tabs > tab:not(:checked) { border-left: $def_border $borders_color; }
+
     > tabs > tab {
       color: $insensitive_fg_color;
-      background-color: transparentize($base_color, 1);
+      background-color: $def_bg_dim;
 
       &:hover:not(:checked) {
         color: mix($fg_color, $insensitive_fg_color, 50%);
-        background-color: transparentize($base_color, 0.5);
-        border-color: $borders_color;
+        background-color: $header_button_hover_bg;
       }
       &:checked {
         color: $fg_color;
@@ -1858,7 +1862,7 @@ notebook {
 
         &:hover {
           @extend %undecorated_button;
-          color: lighten(red, 15%);
+          color: $def_red;
         }
         &:active, &:active:hover {
           @extend %undecorated_button;
@@ -1868,7 +1872,7 @@ notebook {
     }
 
     /* button in headers */
-    button.flat { padding: 2px; }
+    button.flat { padding: $pad_xs; }
   }
 }
 
