@@ -26,19 +26,19 @@
 #shutdown_dialog,
 #restart_dialog {
   font-weight: normal;
-  border-style: none;
+  border-style: $def_border $borders_color;
+  border-radius: $def_border_rad_l;
   background-color: transparent;
   color: $fg_color;
 }
 
 // the top half of the login-window, in GtkDialog terms, the content
 #content_frame {
-  padding-bottom: 14px;
+  padding-bottom: $pad_l;
   background-color: $bg_color;
-  border-top-left-radius: 2px;
-  border-top-right-radius: 2px;
-  border: solid transparentize(black, 0.9);
-  border-width: 1px 1px 0 1px;
+  border-top-left-radius: $def_border_rad_l;
+  border-top-right-radius: $def_border_rad_l;
+  border: $def_border $borders_color;
 }
 
 #content_frame button {
@@ -51,15 +51,12 @@
 
 // the lower half of the login-window, in GtkDialog terms the buttonbox or action area
 #buttonbox_frame {
-  padding-top: 20px;
-  padding-bottom: 0px;
-  border-style: none;
-  background-color: if($variant=='light', $osd_bg_color, $header_bg);
-  border-bottom-left-radius: 3px;
-  border-bottom-right-radius: 3px;
-  border: solid transparentize(black, 0.9);
-  border-width: 0 1px 1px 1px;
-  box-shadow: inset 0 1px if($variant=="light", $dark_sidebar_border, $header_border);
+  padding-top: $pad_l;
+  padding-bottom: $pad_n;
+  background-color: $header_bg;
+  border-bottom-left-radius: $def_border_rad_l;
+  border-bottom-right-radius: $def_border_rad_l;
+  border: $def_border $borders_color;
 }
 
 #buttonbox_frame button {
@@ -72,16 +69,12 @@
 
 #login_window #user_combobox {
   color: $fg_color;
-  font-size: 13px;
 
   menu { font-weight: normal; }
 }
 
 // the user's avatar box
-#user_image {
-  padding: 3px;
-  border-radius: 2px;
-}
+#user_image {}
 
 // the border around the user's avatar box
 #user_image_border {}
@@ -114,14 +107,14 @@
 
 window.background.lightdm {
   menubar {
-    > menuitem { padding : 0 5px 0 5px; }
+    > menuitem { padding : 0 $pad_m 0 $pad_m; }
   }
 
   button {
 
     &.flat.option-button {
       background-color: transparent;
-      color: #dadada;
+      color: $fg_color;
 
       &:hover {
         border-color: transparentize($borders_color, 0.8);
@@ -139,7 +132,7 @@ window.background.lightdm {
     &.toggle-button {
       border-color: transparent;
       background-color: transparent;
-      color: #dadada;
+      color: $fg_color;
 
       &:hover {
         border-color: transparentize($borders_color, 0.8);
@@ -158,22 +151,22 @@ window.background.lightdm {
  entry {
     background-image: none;
     border-image: none;
-    background-color: transparentize(black, 0.7);
-    border-color: transparentize(white, 0.4);
-    border-radius: 5px;
-    padding: 7px;
-    color: white;
+    background-color: $bg_color;
+    border-color: $borders_color;
+    border-radius: $def_border_rad_m;
+    padding: $pad_m;
+    color: $fg_color;
     text-shadow: none;
-    caret-color: white;
+    caret-color: $fg_color;
 
     &:focus {
-      border-color: transparentize(white, 0.1);
-      border-width: 1px;
+      border-color: $selected_borders_color;
+      border-width: $def_border_width;
       border-style: solid;
-      color: white;
+      color: $fg_color;
     }
 
-    &:selected {background-color: transparentize(white, 0.8); }
+    &:selected {background-color: $selected_bg_color; }
 
     &:active {
       -gtk-icon-source: -gtk-icontheme('process-working-symbolic');
