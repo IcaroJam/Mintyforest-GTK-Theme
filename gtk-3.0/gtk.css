@@ -747,6 +747,9 @@ toolbar, .inline-toolbar {
   border-style: solid;
   border-image: linear-gradient(to bottom, #374145, #374145) 1 0 1 0; }
 
+toolbar.horizontal.primary-toolbar toolbutton + toolbutton > button, .horizontal.primary-toolbar.inline-toolbar toolbutton + toolbutton > button {
+  margin-left: 4px; }
+
 .inline-toolbar {
   background-color: #272e33;
   border-style: solid;

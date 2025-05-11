@@ -881,6 +881,12 @@ toolbar {
 .primary-toolbar toolbar,
 .primary-toolbar { @extend %header_widgets; }
 
+toolbar.horizontal.primary-toolbar { // Spacing of header buttons that have borders and are otherwise touching eachother
+  toolbutton + toolbutton > button {
+    margin-left: $pad_s;
+  }
+}
+
 .inline-toolbar {
   @extend toolbar;
   background-color: $bg_color;
