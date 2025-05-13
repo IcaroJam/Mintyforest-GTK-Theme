@@ -882,7 +882,7 @@ toolbar {
 .primary-toolbar { @extend %header_widgets; }
 
 toolbar.horizontal.primary-toolbar { // Spacing of header buttons that have borders and are otherwise touching eachother
-  toolbutton + toolbutton > button {
+  toolbutton + toolbutton > button, toolitem box button + button {
     margin-left: $pad_s;
   }
 }
