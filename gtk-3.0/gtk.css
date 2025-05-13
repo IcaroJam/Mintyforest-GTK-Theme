@@ -1034,11 +1034,11 @@ window > .titlebar:not(headerbar), window > .titlebar:not(headerbar):backdrop, w
 
 
 .primary-toolbar .linked:not(.vertical):not(.path-bar):not(.stack-switcher) button:not(:last-child):not(:only-child), headerbar .linked:not(.vertical):not(.path-bar):not(.stack-switcher) button:not(:last-child):not(:only-child) {
-  margin-right: 1px; }
+  margin-right: 2px; }
 
 .primary-toolbar toolbar .linked:not(.vertical):not(.path-bar) > button,
 .primary-toolbar .linked:not(.vertical):not(.path-bar) > button, .primary-toolbar .inline-toolbar .linked:not(.vertical):not(.path-bar) > button, headerbar .linked:not(.vertical):not(.path-bar) > button {
-  border-radius: 3px;
+  border-radius: 4px;
   border-style: solid; }
 
 
@@ -1334,14 +1334,14 @@ headerbar .linked:not(.vertical).path-bar {
   padding-right: 0; }
 
 .path-bar button.text-button.image-button label:last-child, .path-bar button label:last-child {
-  padding-right: 10px; }
+  padding-right: 8px; }
 
 .path-bar button.text-button.image-button label:first-child, .path-bar button label:first-child {
-  padding-left: 10px; }
+  padding-left: 8px; }
 
 .path-bar button.slider-button, .path-bar button:not(.image-button):not(.text-button) {
-  padding-left: 1px;
-  padding-right: 1px; }
+  padding-left: 2px;
+  padding-right: 2px; }
 
 .path-bar button image {
   padding-left: 4px;
@@ -1371,7 +1371,7 @@ treeview.view {
       color: #5e866c; }
   treeview.view.separator {
     min-height: 2px;
-    color: rgba(0, 0, 0, 0.1); }
+    color: #495156; }
   treeview.view:drop(active) {
     border-style: solid none;
     border-width: 1px;
@@ -1412,7 +1412,7 @@ treeview.view {
       border-radius: 2px;
       border-width: 0; }
   treeview.view header button {
-    padding: 3px 6px;
+    padding: 4px 8px;
     font-weight: bold;
     color: #b1a892;
     background-color: #252b30;
@@ -1441,7 +1441,7 @@ treeview.view {
 menubar,
 .menubar {
   -GtkWidget-window-dragging: true;
-  padding: 0px;
+  padding: 0;
   background-color: #1e2326;
   color: #d3c6aa; }
   menubar:backdrop,
@@ -2154,7 +2154,7 @@ progressbar {
       box-shadow: none; }
   progressbar progress {
     background-color: #83c092;
-    border-radius: 0px;
+    border-radius: 0;
     box-shadow: none; }
     row:selected progressbar progress, infobar progressbar progress {
       background-color: #272e33; }
@@ -2181,8 +2181,8 @@ levelbar.vertical block {
 
 levelbar trough {
   border: none;
-  padding: 3px;
-  border-radius: 3px;
+  padding: 2px;
+  border-radius: 2px;
   background-color: #1c2125; }
 
 levelbar.horizontal.discrete block {
@@ -2314,7 +2314,7 @@ row.activatable:selected.has-open-popup, row.activatable:selected:hover {
   background-color: #76ad83; }
 
 .app-notification {
-  padding: 10px;
+  padding: 8px;
   color: #d3c6aa;
   background-color: #272e33;
   background-clip: border-box;
@@ -2361,12 +2361,11 @@ expander arrow {
 calendar {
   color: #d3c6aa;
   border: 1px solid #374145;
-  border-radius: 3px;
+  border-radius: 4px;
   padding: 2px; }
   calendar:selected {
     background-color: #83c092;
-    color: #272e33;
-    border-radius: 1.5px; }
+    color: #272e33; }
   calendar.header {
     color: #d3c6aa;
     border: none;
@@ -2409,10 +2408,10 @@ calendar {
     border-right-style: none;
     border-bottom-style: none; }
   .message-dialog.csd .dialog-action-area .button:last-child {
-    border-bottom-right-radius: 3px; }
+    border-bottom-right-radius: 4px; }
   .message-dialog.csd .dialog-action-area .button:first-child {
     border-left-style: none;
-    border-bottom-left-radius: 3px; }
+    border-bottom-left-radius: 4px; }
 
 filechooser #pathbarbox {
   background-color: #272e33;
@@ -2443,10 +2442,10 @@ filechooserbutton:drop(active) {
     border-style: none; }
 
 stacksidebar row {
-  padding: 10px 4px; }
+  padding: 8px 4px; }
   stacksidebar row > label {
-    padding-left: 6px;
-    padding-right: 6px; }
+    padding-left: 8px;
+    padding-right: 8px; }
   stacksidebar row.needs-attention {
     background-image: radial-gradient(circle closest-side at 5% 25%, #e67e80 0%, #e67e80 100%, transparent 100%);
     background-size: 70px;
@@ -2463,9 +2462,9 @@ placessidebar > viewport.frame {
 
 placessidebar row {
   min-height: 30px;
-  padding: 0px; }
+  padding: 0; }
   placessidebar row > revealer {
-    padding: 0 10px; }
+    padding: 0 8px; }
   placessidebar row image.sidebar-icon:dir(ltr) {
     padding-right: 8px; }
   placessidebar row image.sidebar-icon:dir(rtl) {
@@ -2632,32 +2631,32 @@ colorswatch, colorswatch:drop(active) {
   border-style: none; }
 
 colorswatch.top {
-  border-top-left-radius: 3px;
-  border-top-right-radius: 3px; }
+  border-top-left-radius: 8px;
+  border-top-right-radius: 8px; }
   colorswatch.top overlay {
-    border-top-left-radius: 3px;
-    border-top-right-radius: 3px; }
+    border-top-left-radius: 8px;
+    border-top-right-radius: 8px; }
 
 colorswatch.bottom {
-  border-bottom-left-radius: 3px;
-  border-bottom-right-radius: 3px; }
+  border-bottom-left-radius: 8px;
+  border-bottom-right-radius: 8px; }
   colorswatch.bottom overlay {
-    border-bottom-left-radius: 3px;
-    border-bottom-right-radius: 3px; }
+    border-bottom-left-radius: 8px;
+    border-bottom-right-radius: 8px; }
 
 colorswatch.left, colorswatch:first-child:not(.top) {
-  border-top-left-radius: 3px;
-  border-bottom-left-radius: 3px; }
+  border-top-left-radius: 8px;
+  border-bottom-left-radius: 8px; }
   colorswatch.left overlay, colorswatch:first-child:not(.top) overlay {
-    border-top-left-radius: 3px;
-    border-bottom-left-radius: 3px; }
+    border-top-left-radius: 8px;
+    border-bottom-left-radius: 8px; }
 
 colorswatch.right, colorswatch:last-child:not(.bottom) {
-  border-top-right-radius: 3px;
-  border-bottom-right-radius: 3px; }
+  border-top-right-radius: 8px;
+  border-bottom-right-radius: 8px; }
   colorswatch.right overlay, colorswatch:last-child:not(.bottom) overlay {
-    border-top-right-radius: 3px;
-    border-bottom-right-radius: 3px; }
+    border-top-right-radius: 8px;
+    border-bottom-right-radius: 8px; }
 
 colorswatch.dark overlay {
   color: rgba(255, 255, 255, 0.7); }
@@ -2702,7 +2701,7 @@ button.color {
     border-radius: 0; }
 
 colorchooser .popover.osd {
-  border-radius: 3px; }
+  border-radius: 2px; }
 
 .content-view {
   background-color: #272e33; }
@@ -2730,7 +2729,7 @@ button.circular-button,
 .stack-switcher > button.circular {
   min-width: 24px;
   min-height: 24px;
-  padding: 5px;
+  padding: 8px;
   border-radius: 50%;
   -gtk-outline-radius: 50%; }
   button.circular label,
@@ -2804,7 +2803,7 @@ headerbar button.titlebutton,
 .titlebar button.titlebutton {
   min-width: 20px;
   min-height: 20px;
-  padding: 10px 1px;
+  padding: 8px 2px;
   margin: 0;
   transition: none;
   border-color: transparent;

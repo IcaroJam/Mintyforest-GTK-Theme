@@ -348,7 +348,7 @@ button {
 
   @include button(normal);
 
-  separator { margin: 4px; }
+  separator { margin: $pad_s; }
 
   @at-root %button_basic_flat,
   &.flat {
@@ -559,7 +559,7 @@ button {
   //inline-toolbar buttons
   .inline-toolbar &, .inline-toolbar &:backdrop {
     border-radius: $def_border_rad_s;
-    border-width: 1px;
+    border-width: $def_border_width;
     @extend %linked;
   }
 
@@ -681,10 +681,10 @@ modelbutton.flat {
 
   // FIXME: temporary workaround
   check:last-child,
-  radio:last-child { margin-left: 8px; }
+  radio:last-child { margin-left: $pad_m; }
 
   check:first-child,
-  radio:first-child { margin-right: 8px; }
+  radio:first-child { margin-right: $pad_m; }
 }
 
 modelbutton.flat arrow {
@@ -1111,7 +1111,7 @@ headerbar {
 %header_separator {
   min-width: 1px;
   min-height: 1px;
-  border-width: 0 1px;
+  border-width: 0 $def_border_width;
   border-image: linear-gradient(to bottom,
                                 transparentize($header_fg, 1) 25%,
                                 transparentize($header_fg, 0.65) 25%,
@@ -1203,13 +1203,13 @@ headerbar {
 
   // Disconnect linked buttons
   .linked:not(.vertical):not(.path-bar):not(.stack-switcher) {
-    button:not(:last-child):not(:only-child) { margin-right: 1px; }
+    button:not(:last-child):not(:only-child) { margin-right: $pad_xs; }
   }
 
   // Reset buttons
   .linked:not(.vertical):not(.path-bar) > button {
     &, &:hover, &:active, &:checked, &:disabled {
-      border-radius: 3px;
+      border-radius: $def_border_rad_m;
       border-style: solid;
     }
   }
@@ -1328,13 +1328,11 @@ headerbar {
         border-right-style: none;
 
         &:focus { box-shadow: none; }
-        @if $variant=='light' { &:focus { box-shadow: 1px 0 $selected_bg_color; } }
       }
       &:dir(rtl) {
         border-left-style: none;
 
         &:focus { box-shadow: none; }
-        @if $variant=='light' { &:focus { box-shadow: -1px 0 $selected_bg_color; } }
       }
     }
     > .linked > button.combo {
@@ -1410,19 +1408,19 @@ headerbar {
   &.text-button.image-button label { padding-left: 0; padding-right: 0; }
 
   &.text-button.image-button, & {
-    label:last-child { padding-right: 10px; }
-    label:first-child { padding-left: 10px; }
+    label:last-child { padding-right: $pad_m; }
+    label:first-child { padding-left: $pad_m; }
   }
 
   &.slider-button,
   &:not(.image-button):not(.text-button) {
-    padding-left: 1px;
-    padding-right: 1px;
+    padding-left: $pad_xs;
+    padding-right: $pad_xs;
   }
 
   image {
-    padding-left: 4px;
-    padding-right: 4px;
+    padding-left: $pad_s;
+    padding-right: $pad_s;
   }
 }
 
@@ -1470,12 +1468,12 @@ treeview.view {
 
   &.separator {
     min-height: 2px;
-    color: transparentize(black, 0.9);
+    color: $separator_color;
   }
 
   &:drop(active) {
     border-style: solid none;
-    border-width: 1px;
+    border-width: $def_border_width;
     border-color: mix($fg_color, $selected_bg_color, 50%);
 
     &.after { border-top-style: none; }
@@ -1502,7 +1500,7 @@ treeview.view {
 
   &.progressbar, &.progressbar:focus { // progress bar in treeviews
     color: $selected_fg_color;
-    border-radius: 2px;
+    border-radius: $def_border_rad_s;
     background-color: $selected_bg_color;
 
     &:selected, &:selected:focus {
@@ -1514,13 +1512,13 @@ treeview.view {
   &.trough { // progress bar trough in treeviews
     color: $fg_color;
     background-color: $trough_color_treeview;
-    border-radius: 2px;
-    border: 1px solid $button_border;
+    border-radius: $def_border_rad_s;
+    border: $def_border $button_border;
 
     &:selected, &:selected:focus {
       color: $selected_fg_color;
       background-color: transparentize(black, 0.8);
-      border-radius: 2px;
+      border-radius: $def_border_rad_s;
       border-width: 0;
     }
   }
@@ -1529,7 +1527,7 @@ treeview.view {
     button {
       $_column_header_color: mix($fg_color,$base_color,80%);
 
-      padding: 3px 6px;
+      padding: $pad_s $pad_m;
       font-weight: bold;
 
       color: $_column_header_color;
@@ -1569,7 +1567,7 @@ treeview.view {
 menubar,
 .menubar {
   -GtkWidget-window-dragging: true;
-  padding: 0px;
+  padding: $pad_n;
   background-color: opacify($header_bg, 1);
   color: $header_fg;
 
@@ -2058,13 +2056,13 @@ switch {
 checkbutton, radiobutton {
   // this is for a nice focus on check and radios text
   &.text-button {
-      padding: 2px 0;
+      padding: $pad_xs $pad_n;
       outline-offset: 0;
     }
 
   label:not(:only-child) {
-    &:first-child { margin-left: 4px; }
-    &:last-child { margin-right: 4px; }
+    &:first-child { margin-left: $pad_s; }
+    &:last-child { margin-right: $pad_s; }
   }
 }
 
@@ -2072,7 +2070,7 @@ check,
 radio {
   min-width: 16px;
   min-height: 16px;
-  margin: 0 2px;
+  margin: $pad_n $pad_xs;
 
   &:only-child,
   menu menuitem & { margin: 0; }
@@ -2311,7 +2309,7 @@ progressbar {
   // Moving bit
   progress {
     background-color: $selected_bg_color;
-    border-radius: 0px;
+    border-radius: $def_border_rad_n;
     box-shadow: none; //needed for clipping
 
     row:selected &,
@@ -2320,8 +2318,8 @@ progressbar {
 
   // Trough
   trough {
-    border: 1px solid $button_border;
-    border-radius: 2px;
+    border: $def_border $button_border;
+    border-radius: $def_border_rad_s;
     background-color: $trough_color;
 
     row:selected &,
@@ -2350,8 +2348,8 @@ levelbar {
 
   trough {
     border: none;
-    padding: 3px;
-    border-radius: 3px;
+    padding: $pad_xs;
+    border-radius: $def_border_rad_s;
     background-color: if($variant == 'light', $button_border, darken($bg_color, 5%));
   }
 
@@ -2359,9 +2357,9 @@ levelbar {
   &.vertical.discrete block { margin: 1px 0; }
 
   block:not(.empty) {
-    border: 1px solid $selected_bg_color;
+    border: $def_border $selected_bg_color;
     background-color: $selected_bg_color;
-    border-radius: 2px;
+    border-radius: $def_border_rad_s;
   }
   block.low {
     border-color: $warning_color;
@@ -2484,12 +2482,12 @@ row { // For stuff like the settings option boxes
 // App Notifications
 //
 .app-notification {
-  padding: 10px;
+  padding: $pad_m;
   color: $osd_fg_color;
   background-color: $osd_bg_color;
   background-clip: border-box;
-  border-radius: 0 0 2px 2px;
-  border-width: 0 1px 1px 1px;
+  border-radius: $def_border_rad_n $def_border_rad_n $def_border_rad_s $def_border_rad_s;
+  border-width: 0 $def_border_width $def_border_width $def_border_width;
   border-style: solid;
   border-color: darken($osd_bg_color, 10%);
 
@@ -2529,14 +2527,13 @@ expander {
 //
 calendar {
   color: $fg_color;
-  border: 1px solid $borders_color;
-  border-radius: 3px;
-  padding: 2px;
+  border: $def_border $borders_color;
+  border-radius: $def_border_rad_m;
+  padding: $pad_xs;
 
   &:selected {
     background-color: $selected_bg_color;
     color: $selected_fg_color;
-    border-radius: 1.5px;
   }
   &.header {
     color: $fg_color;
@@ -2576,7 +2573,7 @@ calendar {
 .message-dialog { // Message Dialog styling
   -GtkDialog-button-spacing: 0;
 
-  .titlebar { background-color: $header_bg; border-bottom: 1px solid darken($header_bg, 7%) }
+  .titlebar { background-color: $header_bg; border-bottom: $def_border darken($header_bg, 7%) }
 
   &.csd { // rounded bottom border styling for csd version
     &.background {
@@ -2602,11 +2599,11 @@ calendar {
       border-bottom-style: none;
     }
     %last_button {
-      border-bottom-right-radius: 3px;
+      border-bottom-right-radius: $def_border_rad_m;
     }
     %first_button {
       border-left-style: none;
-      border-bottom-left-radius: 3px;
+      border-bottom-left-radius: $def_border_rad_m;
     }
   }
 }
@@ -2668,11 +2665,11 @@ stacksidebar {
   }
 
   row {
-    padding: 10px 4px;
+    padding: $pad_m $pad_s;
 
     > label {
-      padding-left: 6px;
-      padding-right: 6px;
+      padding-left: $pad_m;
+      padding-right: $pad_m;
     }
     &.needs-attention {
       background-image: radial-gradient(circle closest-side at 5% 25%, $destructive_color 0%, $destructive_color 100%, transparent 100%);
@@ -2695,25 +2692,25 @@ placessidebar {
   row {
     // Needs overriding of the GtkListBoxRow padding
     min-height: 30px;
-    padding: 0px;
+    padding: $pad_n;
     // Using margins/padding directly in the SidebarRow
     // will make the animation of the new bookmark row jump
     > revealer {
-      padding: 0 10px;
+      padding: $pad_n $pad_m;
     }
     image.sidebar-icon {
-      &:dir(ltr) { padding-right: 8px; }
-      &:dir(rtl) { padding-left: 8px; }
+      &:dir(ltr) { padding-right: $pad_m; }
+      &:dir(rtl) { padding-left: $pad_m; }
     }
     label.sidebar-label {
-      &:dir(ltr) { padding-right: 2px; }
-      &:dir(rtl) { padding-left: 2px; }
+      &:dir(ltr) { padding-right: $pad_xs; }
+      &:dir(rtl) { padding-left: $pad_xs; }
     }
     @at-root button.sidebar-button {
       min-width: 22px;
       min-height: 22px;
-      margin-top: 2px;
-      margin-bottom: 2px;
+      margin-top: $pad_xs;
+      margin-bottom: $pad_xs;
       padding: 0;
       @extend %button_basic_flat;
       border-radius: 100%;
@@ -2723,7 +2720,7 @@ placessidebar {
     }
 
     &.sidebar-placeholder-row {
-      padding: 0 8px;
+      padding: $pad_n $pad_m;
       min-height: 2px;
       background-image: _solid($drop_target_color);
       background-clip: content-box;
@@ -2761,8 +2758,8 @@ placesview {
 
   // this selects the "connect to server" label
   > actionbar > revealer > box > label {
-    padding-left: 8px;
-    padding-right: 8px;
+    padding-left: $pad_m;
+    padding-right: $pad_m;
   }
 }
 
@@ -2950,39 +2947,39 @@ colorswatch {
 
   // border rounding
   &.top {
-    border-top-left-radius: 3px;
-    border-top-right-radius: 3px;
+    border-top-left-radius: $def_border_rad_l;
+    border-top-right-radius: $def_border_rad_l;
 
     overlay {
-      border-top-left-radius: 3px;
-      border-top-right-radius: 3px;
+      border-top-left-radius: $def_border_rad_l;
+      border-top-right-radius: $def_border_rad_l;
     }
   }
   &.bottom {
-    border-bottom-left-radius: 3px;
-    border-bottom-right-radius: 3px;
+    border-bottom-left-radius: $def_border_rad_l;
+    border-bottom-right-radius: $def_border_rad_l;
 
     overlay {
-      border-bottom-left-radius: 3px;
-      border-bottom-right-radius: 3px;
+      border-bottom-left-radius: $def_border_rad_l;
+      border-bottom-right-radius: $def_border_rad_l;
     }
   }
   &.left, &:first-child:not(.top) {
-    border-top-left-radius: 3px;
-    border-bottom-left-radius: 3px;
+    border-top-left-radius: $def_border_rad_l;
+    border-bottom-left-radius: $def_border_rad_l;
 
     overlay {
-      border-top-left-radius: 3px;
-      border-bottom-left-radius: 3px;
+      border-top-left-radius: $def_border_rad_l;
+      border-bottom-left-radius: $def_border_rad_l;
     }
   }
   &.right, &:last-child:not(.bottom) {
-    border-top-right-radius: 3px;
-    border-bottom-right-radius: 3px;
+    border-top-right-radius: $def_border_rad_l;
+    border-bottom-right-radius: $def_border_rad_l;
 
     overlay {
-      border-top-right-radius: 3px;
-      border-bottom-right-radius: 3px;
+      border-top-right-radius: $def_border_rad_l;
+      border-bottom-right-radius: $def_border_rad_l;
     }
   }
   &.dark overlay {
@@ -2999,7 +2996,7 @@ colorswatch {
   }
 
   overlay {
-    border: 1px solid if($variant == 'light', transparentize(black, 0.85), $borders_color);
+    border: $def_border $borders_color;
     &:hover { background-color: transparentize(white, 0.8) }
   }
 
@@ -3014,7 +3011,7 @@ colorswatch {
   // make the add color button looks like, well, a button
   &#add-color-button {
     border-style: solid; // the borders are drawn by the overlay for standard colorswatches to have them semi
-    border-width: 1px;   // translucent on the colored background, here it's not necessary so they need to be set
+    border-width: $def_border_width;   // translucent on the colored background, here it's not necessary so they need to be set
     @include button(normal);
     &:hover { @include button(hover); }
     overlay { @include button(undecorated); } // reset the overlay to not cover the button style underneath
@@ -3026,14 +3023,14 @@ button.color {
 
   colorswatch:first-child:last-child {
     &, overlay {
-      margin: 4px;
+      margin: $pad_s;
       border-radius: 0;
     }
   }
 }
 
 // colorscale popup
-colorchooser .popover.osd { border-radius: 3px; }
+colorchooser .popover.osd { border-radius: $def_border_rad_s; }
 
 //
 // Misc
@@ -3068,7 +3065,7 @@ button.circular-button,
 .stack-switcher > button.circular {
   min-width: 24px;
   min-height: 24px;
-  padding: 5px;
+  padding: $pad_m;
   border-radius: 50%;
   -gtk-outline-radius: 50%;
 
@@ -3083,7 +3080,7 @@ button.circular-button,
 
   color: $fg_color;
   background-color: $base_color;
-  border: 1px solid $borders_color;
+  border: $def_border $borders_color;
   border-radius: 2.5px;
   box-shadow: inset 0px -2px 0px if($variant=='light', transparentize(black, 0.95), transparentize(black, 0.85));
 }
@@ -3188,7 +3185,7 @@ headerbar,
     min-height: 20px;
     @extend .image-button;
 
-    padding: 10px 1px;
+    padding: $pad_m $pad_xs;
     margin: 0;
     transition: none;
 
