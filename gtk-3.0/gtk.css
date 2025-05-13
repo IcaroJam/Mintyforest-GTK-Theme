@@ -2067,9 +2067,9 @@ scale {
     outline-offset: 2px;
     -gtk-outline-radius: 4.5px;
     border-radius: 2.5px;
-    background-color: #1c2125; }
+    background-color: #2e383c; }
     scale trough:disabled {
-      background-color: rgba(28, 33, 37, 0.55); }
+      background-color: rgba(46, 56, 60, 0.55); }
     .osd scale trough {
       background-color: #364047;
       outline-color: rgba(211, 198, 170, 0.2); }
@@ -2183,7 +2183,7 @@ levelbar trough {
   border: none;
   padding: 2px;
   border-radius: 2px;
-  background-color: #1c2125; }
+  background-color: #2e383c; }
 
 levelbar.horizontal.discrete block {
   margin: 0 1px; }
@@ -3679,8 +3679,8 @@ SwitchboardCategoryView .view:selected:focus {
   color: #d3c6aa; }
 
 .cs-header {
-  padding: 6px;
-  background-color: #252b30;
+  padding: 8px;
+  background-color: #272e33;
   border-bottom: 1px solid #374145; }
 
 .xed-window .xed-panel.side notebook tab.top {
