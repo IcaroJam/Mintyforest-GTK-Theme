@@ -2617,7 +2617,7 @@ calendar {
 filechooser {
   #pathbarbox {
     background-color: $filechooser_bg;
-    border-bottom: 1px solid $borders_color;
+    border-bottom: $def_border $borders_color;
   }
 
   .search-bar { background-color: $filechooser_bg; }

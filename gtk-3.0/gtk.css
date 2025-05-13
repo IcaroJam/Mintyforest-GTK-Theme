@@ -49,7 +49,7 @@ textview text {
   iconview text:hover,
   textview text:hover {
     color: #83c092;
-    background-color: #2e383c;
+    background-color: #374145;
     border-color: #374145;
     border-radius: 4px;
     border: none; }
@@ -271,7 +271,7 @@ button {
         transition: all 200ms cubic-bezier(0.25, 0.46, 0.45, 0.94); }
   button:hover {
     color: #83c092;
-    background-color: #2e383c;
+    background-color: #374145;
     border-color: #374145;
     -gtk-icon-effect: highlight; }
   button:active, button:checked {
@@ -503,7 +503,7 @@ button {
   border-color: #374145; }
   .inline-toolbar toolbutton > button:hover {
     color: #83c092;
-    background-color: #2e383c;
+    background-color: #374145;
     border-color: #374145; }
   .inline-toolbar toolbutton > button:active, .inline-toolbar toolbutton > button:checked {
     color: #272e33;
@@ -2688,7 +2688,7 @@ colorswatch#add-color-button {
   border-color: #374145; }
   colorswatch#add-color-button:hover {
     color: #83c092;
-    background-color: #2e383c;
+    background-color: #374145;
     border-color: #374145; }
   colorswatch#add-color-button overlay {
     border-color: transparent;
@@ -2711,7 +2711,7 @@ colorchooser .popover.osd {
 
 .scale-popup button:hover {
   color: #83c092;
-  background-color: #2e383c;
+  background-color: #374145;
   border-color: #374145; }
 
 .touch-selection,
@@ -3760,7 +3760,7 @@ EvWindow .content-view .view:focus:selected {
   border-color: #374145; }
   #content_frame button:hover {
     color: #83c092;
-    background-color: #2e383c;
+    background-color: #374145;
     border-color: #374145; }
   #content_frame button:active, #content_frame button:checked {
     color: #272e33;
